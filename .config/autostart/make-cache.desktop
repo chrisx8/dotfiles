@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=bash /home/chris/opt/make-cache.sh
+Name=make-cache
+StartupNotify=true
+Terminal=false
+Type=Application

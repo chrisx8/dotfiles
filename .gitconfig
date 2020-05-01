@@ -1,0 +1,7 @@
+[user]
+	name = Chris
+	email = email@e.mail
+[includeIf "gitdir:/home/chris/Documents/GitHub/"]
+	path = /home/chris/Documents/GitHub/.gitconfig
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
