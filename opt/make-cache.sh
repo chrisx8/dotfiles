@@ -16,6 +16,8 @@ DIRS="
 .config/Signal/logs
 .config/Signal/temp
 .local/share/gvfs-metadata
+.local/share/RecentDocuments
+.local/share/stalefiles
 .Wolfram
 "
 
