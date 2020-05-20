@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BASE_DIR="/tmp/user/$USER"
+BASE_DIR="/tmp/home-$USER"
 
 DIRS="
 .cache
@@ -11,6 +11,7 @@ DIRS="
 .config/Code*-*OSS/GPUCache
 .config/Code*-*OSS/logs
 .config/session
+.config/Signal/Cache
 .config/Signal/Code*Cache
 .config/Signal/GPUCache
 .config/Signal/logs
@@ -22,21 +23,19 @@ DIRS="
 "
 
 if [[ -d "$BASE_DIR" ]]; then
-    echo "$BASE_DIR already exists"
-    exit 1
+	echo "$BASE_DIR already exists"
+	exit 1
 fi
 
 mkdir -p -m 700 "$BASE_DIR"
 
 for DIR in $DIRS; do
-    if [[ ! -z "$DIR" ]]; then
-        DIR=$(echo "$DIR" | sed 's/*/ /g')
-        echo "Creating $BASE_DIR/$DIR"
-        mkdir -p -m 700 "$BASE_DIR/$DIR"
-        if [[ !  -L "/$HOME/$DIR" ]]; then
-            echo "Linking $BASE_DIR/$DIR to $HOME"
-            ln -s "$BASE_DIR/$DIR" "$HOME/$DIR"
-        fi
-    fi
+	DIR=$(echo "$DIR" | sed 's/*/ /g')
+	echo "Creating $BASE_DIR/$DIR"
+	mkdir -p -m 700 "$BASE_DIR/$DIR"
+	if [[ !  -L "/$HOME/$DIR" ]]; then
+		echo "Linking $BASE_DIR/$DIR to $HOME"
+		ln -s "$BASE_DIR/$DIR" "$HOME/$DIR"
+	fi
 done
 exit 0

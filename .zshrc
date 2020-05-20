@@ -1,21 +1,26 @@
+# Enable Powerlevel10k instant prompt.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Load gitstatus binary
+[[ -d ~/.cache/gitstatus ]] || ln -s ~/.local/gitstatus ~/.cache
+
 # If you come from bash you might have to change your $PATH.
-#export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/chris/.oh-my-zsh"
 
 # Set name of the theme to load
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Powerlevel10k prompt. To customize, run `p10k configure` or edit ~/.p10k.zsh.
 if [[ "$XDG_SESSION_TYPE" == "tty" ]]; then
-	ZSH_THEME="robbyrussell"
+	[[ -f ~/.p10k-ascii.zsh ]] && source ~/.p10k-ascii.zsh
 else
-	# Enable Powerlevel10k instant prompt.
-	if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-		source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-	fi
-	# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-	ZSH_THEME="powerlevel10k/powerlevel10k"
-	[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+	[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 fi
 
 # Uncomment the following line to use case-sensitive completion.
@@ -63,7 +68,10 @@ export EDITOR='vim'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+# Command completion
 autoload -Uz compinit && compinit -i
+autoload -Uz bashcompinit && bashcompinit
+complete -C aws_completer aws
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 alias qr='qrencode -t utf8'

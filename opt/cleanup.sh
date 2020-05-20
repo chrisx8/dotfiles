@@ -1,9 +1,6 @@
 #!/bin/bash
 
 echo '##### Cleaning cache... #####'
-rm -rf ~/.cache/*
-rm -rf ~/.config/Signal/attachments.noindex/*
-rm -rf ~/.local/share/RecentDocuments/*
 rm -rf ~/.gnome
 rm -rf ~/.npm   
 rm -rf ~/.pylint.d
