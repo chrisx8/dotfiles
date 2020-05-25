@@ -11,7 +11,6 @@ DIRS="
 .config/Code*-*OSS/GPUCache
 .config/Code*-*OSS/logs
 .config/session
-.config/Signal/Cache
 .config/Signal/Code*Cache
 .config/Signal/GPUCache
 .config/Signal/logs
