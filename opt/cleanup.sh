@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo '##### Cleaning cache... #####'
+rm -rf ~/.cache/*
 rm -rf ~/.gnome
 rm -rf ~/.npm   
 rm -rf ~/.pylint.d
