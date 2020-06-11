@@ -11,4 +11,5 @@ My Linux dotfiles
 - [libinput-gestures](https://github.com/bulletmark/libinput-gestures)
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
+- [Vim](https://www.vim.org)
 - [ZSH](http://zsh.sourceforge.net/)

@@ -1,11 +1,3 @@
-# Enable Powerlevel10k instant prompt.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# Load gitstatus binary
-[[ -d ~/.cache/gitstatus ]] || ln -s ~/.local/gitstatus ~/.cache
-
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/.local/bin:$PATH"
 
@@ -15,6 +7,9 @@ export ZSH="/home/chris/.oh-my-zsh"
 # Set name of the theme to load
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Load gitstatus binary
+[[ -d ~/.cache/gitstatus ]] || ln -s ~/.local/gitstatus ~/.cache
 
 # Powerlevel10k prompt. To customize, run `p10k configure` or edit ~/.p10k.zsh.
 if [[ "$XDG_SESSION_TYPE" == "tty" ]]; then
@@ -72,6 +67,18 @@ export EDITOR='vim'
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
 complete -C aws_completer aws
+
+# Set personal functions
+function start-ssh-agent {
+	SSH_ENV="$XDG_RUNTIME_DIR/ssh-agent.env"
+	[[ -f "$SSH_ENV" ]] && . "$SSH_ENV"
+	if [[ ! $(ps "$SSH_AGENT_PID" 2>&1 | grep ssh-agent) ]]; then
+		ssh-agent | sed 's/echo/#echo/' > "${SSH_ENV}"
+		chmod 600 "$SSH_ENV"
+		. "$SSH_ENV"
+		ssh-add < /dev/null
+	fi
+}
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 alias qr='qrencode -t utf8'
