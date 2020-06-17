@@ -1,4 +1,1 @@
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
-SSH_ASKPASS=/usr/bin/ksshaskpass
+QT_STYLE_OVERRIDE=kvantum

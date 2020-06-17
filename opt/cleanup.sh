@@ -3,6 +3,7 @@
 echo '##### Cleaning cache... #####'
 rm -rf ~/.cache/*
 rm -rf ~/.gnome
+rm -rf ~/.local/share/virtualenv
 rm -rf ~/.npm   
 rm -rf ~/.pylint.d
 rm -f ~/.local/share/recently-used.xbel

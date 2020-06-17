@@ -68,18 +68,6 @@ autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
 complete -C aws_completer aws
 
-# Set personal functions
-function start-ssh-agent {
-	SSH_ENV="$XDG_RUNTIME_DIR/ssh-agent.env"
-	[[ -f "$SSH_ENV" ]] && . "$SSH_ENV"
-	if [[ ! $(ps "$SSH_AGENT_PID" 2>&1 | grep ssh-agent) ]]; then
-		ssh-agent | sed 's/echo/#echo/' > "${SSH_ENV}"
-		chmod 600 "$SSH_ENV"
-		. "$SSH_ENV"
-		ssh-add < /dev/null
-	fi
-}
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 alias qr='qrencode -t utf8'
 alias usevenv='source venv/bin/activate'
