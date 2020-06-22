@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=bash /home/chris/opt/make-cache.sh
+Exec=bash /home/chris/.local/bin/make-cache.sh
 Name=make-cache
 StartupNotify=true
 Terminal=false

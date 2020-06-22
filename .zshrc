@@ -9,7 +9,7 @@ export ZSH="/home/chris/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Load gitstatus binary
-[[ -d ~/.cache/gitstatus ]] || ln -s ~/.local/gitstatus ~/.cache
+[[ -d ~/.cache/gitstatus ]] || ln -s ~/.local/bin/gitstatus ~/.cache
 
 # Powerlevel10k prompt. To customize, run `p10k configure` or edit ~/.p10k.zsh.
 if [[ "$XDG_SESSION_TYPE" == "tty" ]]; then
@@ -71,3 +71,4 @@ complete -C aws_completer aws
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 alias qr='qrencode -t utf8'
 alias usevenv='source venv/bin/activate'
+alias youtube-audio-dl='youtube-dl -f bestaudio -x --audio-format mp3 --audio-quality 192K'

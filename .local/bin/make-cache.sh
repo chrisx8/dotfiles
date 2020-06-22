@@ -15,10 +15,6 @@ DIRS="
 .config/Signal/GPUCache
 .config/Signal/logs
 .config/Signal/temp
-.local/share/gvfs-metadata
-.local/share/RecentDocuments
-.local/share/stalefiles
-.Wolfram
 "
 
 if [[ -d "$BASE_DIR" ]]; then
