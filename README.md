@@ -6,6 +6,7 @@ My Linux dotfiles
 
 - [Bash](https://www.gnu.org/software/bash/)
 - [Chromium](https://www.chromium.org/Home)
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Git](https://git-scm.com)
 - [libinput-gestures](https://github.com/bulletmark/libinput-gestures)
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)

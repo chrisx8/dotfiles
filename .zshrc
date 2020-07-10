@@ -67,6 +67,7 @@ export EDITOR='vim'
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
 complete -C aws_completer aws
+source /etc/bash_completion.d/windscribe_complete
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 alias qr='qrencode -t utf8'
