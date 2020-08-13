@@ -1,0 +1,10 @@
+[Unit]
+Description=Sound Fix For ThinkPad X1 Carbon 7th
+After=multi-user.target suspend.target hibernate.target hybrid-sleep.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/hda-verb /dev/snd/hwC0D0 0x17 SET_CONNECT_SEL 1
+
+[Install]
+WantedBy=multi-user.target suspend.target hibernate.target hybrid-sleep.target
