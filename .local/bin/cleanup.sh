@@ -8,6 +8,7 @@ rm -rf ~/.npm
 rm -rf ~/.pylint.d
 rm -f ~/.local/share/recently-used.xbel
 rm -f ~/.lesshst
+rm -f ~/.oh-my-zsh/cache/*
 rm -f ~/.viminfo
 rm -f ~/.*_history
 

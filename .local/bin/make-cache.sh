@@ -7,6 +7,7 @@ DIRS="
 .config/Code*-*OSS/Cache
 .config/Code*-*OSS/CachedData
 .config/Code*-*OSS/CachedExtensions
+.config/Code*-*OSS/CachedExtensionVSIXs
 .config/Code*-*OSS/Code*Cache
 .config/Code*-*OSS/GPUCache
 .config/Code*-*OSS/logs
