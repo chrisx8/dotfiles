@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ -f requirements.txt ]] && [[ -d "$VIRTUAL_ENV" ]] ; then
+if [[ -f requirements.txt ]] && [[ -d "$VIRTUAL_ENV" ]]; then
 	sed -i 's/==/>=/g' requirements.txt
 	pip install -U -r requirements.txt
 	pip freeze > requirements.txt
