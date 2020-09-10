@@ -5,7 +5,11 @@
     "files.exclude": {
         "**/.idea": true,
         "**/.vscode": true,
-        "**/venv": true
+        "**/venv": true,
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "terminal.integrated.enableBell": true,
     "terminal.integrated.fontFamily": "MesloLGS NF",
