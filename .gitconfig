@@ -1,3 +1,5 @@
+[core]
+	autocrlf = input
 [user]
 	name = Chris
 	email = email@localhost
