@@ -10,7 +10,6 @@ DIRS="
 .config/Code*-*OSS/CachedExtensionVSIXs
 .config/Code*-*OSS/Code*Cache
 .config/Code*-*OSS/GPUCache
-.config/Code*-*OSS/logs
 .config/session
 .config/Signal/Cache
 .config/Signal/Code*Cache
