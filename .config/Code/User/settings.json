@@ -27,7 +27,6 @@
     "cSpell.allowCompoundWords": true,
     "git.showPushSuccessNotification": true,
     "git.enableSmartCommit": true,
-    "terminal.external.linuxExec": "konsole",
+    "terminal.external.linuxExec": "gnome-terminal",
     "window.zoomLevel": 0,
-    "java.semanticHighlighting.enabled": true,
 }

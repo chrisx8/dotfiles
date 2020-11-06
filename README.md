@@ -12,7 +12,7 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
 - [Vim](https://www.vim.org)
-- [Visual Studio Code - Open Source ("Code - OSS")](https://github.com/microsoft/vscode)
+- [Visual Studio Code](https://code.visualstudio.com/)
 - [ZSH](http://zsh.sourceforge.net/)
 
 ## Extras
