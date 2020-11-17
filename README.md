@@ -8,6 +8,7 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Git](https://git-scm.com)
 - [libinput-gestures](https://github.com/bulletmark/libinput-gestures)
+- [NetworkManager](https://gitlab.freedesktop.org/NetworkManager/NetworkManager)
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
@@ -19,6 +20,8 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 
 - systemd-boot config
   - `/boot/loader`
+- NetworkManager dispatcher scripts
+  - `/etc/NetworkManager/dispatcher.d/99-vpn`: Disable IPv6 when VPN is connected
 - Audio fixes for ThinkPad X1 Carbon (7th Gen), when using SOF drivers
   - Kernel 5.5 and later should use SOF by default. Installation of `sof-firmware` is required.
   - Fix no longer needed on kernel 5.8.12 or later with latest alsa-ucm-conf and PulseAudio 13.99.1 or later.

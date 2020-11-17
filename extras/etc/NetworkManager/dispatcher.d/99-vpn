@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Args
+IFACE="$1"
+ACTION="$2"
+
+if [[ "$ACTION" == "vpn-up" ]]; then
+	# disable ipv6 when vpn is up
+	sysctl -w net.ipv6.conf.all.disable_ipv6=1
+elif [[ "$ACTION" == "vpn-down" ]]; then
+	# enable ipv6 when vpn is down
+	sysctl -w net.ipv6.conf.all.disable_ipv6=0
+fi
+exit "$?"
