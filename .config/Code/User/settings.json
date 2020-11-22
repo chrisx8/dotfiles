@@ -30,4 +30,5 @@
     "terminal.external.linuxExec": "gnome-terminal",
     "window.zoomLevel": 0,
     "git.autofetch": true,
+    "python.showStartPage": false,
 }
