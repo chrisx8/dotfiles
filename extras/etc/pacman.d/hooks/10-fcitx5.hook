@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = fcitx5
+
+[Action]
+Description = Disabling autostart for fcitx5...
+When = PostTransaction
+Exec = /usr/bin/rm /etc/xdg/autostart/org.fcitx.Fcitx5.desktop

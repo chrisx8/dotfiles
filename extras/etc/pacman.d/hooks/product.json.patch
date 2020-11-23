@@ -1,0 +1,14 @@
+@@ -1,10 +1,10 @@
+ {
+ 	"quality": "stable",
+ 	"extensionsGallery": {
+-		"serviceUrl": "https://open-vsx.org/vscode/gallery",
+-		"itemUrl": "https://open-vsx.org/vscode/item"
++		"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery",
++		"cacheUrl": "https://vscode.blob.core.windows.net/gallery/index",
++		"itemUrl": "https://marketplace.visualstudio.com/items"
+ 	},
+-	"linkProtectionTrustedDomains": ["https://open-vsx.org"],
+ 	"documentationUrl": "https://code.visualstudio.com/docs",
+ 	"requestFeatureUrl": "https://github.com/Microsoft/vscode/issues",
+ 	"introductoryVideosUrl": "https://go.microsoft.com/fwlink/?linkid=832146",

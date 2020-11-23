@@ -4,12 +4,12 @@ BASE_DIR="/tmp/home-$USER"
 
 DIRS="
 .cache
-.config/Code/Cache
-.config/Code/CachedData
-.config/Code/CachedExtensions
-.config/Code/CachedExtensionVSIXs
-.config/Code/Code*Cache
-.config/Code/GPUCache
+.config/Code*-*OSS/Cache
+.config/Code*-*OSS/CachedData
+.config/Code*-*OSS/CachedExtensions
+.config/Code*-*OSS/CachedExtensionVSIXs
+.config/Code*-*OSS/Code*Cache
+.config/Code*-*OSS/GPUCache
 .config/session
 .config/Signal/Cache
 .config/Signal/Code*Cache

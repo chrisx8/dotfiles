@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = code
+
+[Action]
+Description = Patching /usr/lib/code/product.json...
+When = PostTransaction
+Exec = /usr/bin/patch -s /usr/lib/code/product.json /etc/pacman.d/hooks/product.json.patch
