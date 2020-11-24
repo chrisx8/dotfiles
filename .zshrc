@@ -77,6 +77,7 @@ complete -C aws_completer aws
 source /etc/bash_completion.d/windscribe_complete
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
+alias docker=podman
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias qr='qrencode -t utf8'
 alias usevenv='source venv/bin/activate'
