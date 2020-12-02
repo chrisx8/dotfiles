@@ -82,3 +82,4 @@ alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bol
 alias qr='qrencode -t utf8'
 alias usevenv='source venv/bin/activate'
 alias youtube-audio-dl='youtube-dl -f bestaudio -x --audio-format mp3 --audio-quality 192K'
+alias zshupdate='omz update && git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull'
