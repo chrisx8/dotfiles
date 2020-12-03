@@ -8,6 +8,7 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 - [fcitx5](https://github.com/fcitx/fcitx5)
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Git](https://git-scm.com)
+- [GitHub CLI](https://github.com/cli/cli)
 - [libinput-gestures](https://github.com/bulletmark/libinput-gestures)
 - [NetworkManager](https://gitlab.freedesktop.org/NetworkManager/NetworkManager)
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
