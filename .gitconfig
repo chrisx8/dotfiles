@@ -3,8 +3,8 @@
 [user]
 	name = Chris
 	email = email@localhost
-[includeIf "gitdir:/home/chris/Documents/1github/"]
-	path = /home/chris/Documents/1github/.gitconfig
+[includeIf "gitdir:/home/chris/Documents/GitHub/"]
+	path = /home/chris/Documents/GitHub/.gitconfig
 [credential]
 	helper = /usr/lib/git-core/git-credential-libsecret
 [pull]
