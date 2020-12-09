@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo '##### Cleaning cache... #####'
-rm -rf ~/.cache
+rm -rf ~/.cache/*
 rm -rf ".config/Code - OSS/Cache"
 rm -rf ".config/Code - OSS/CachedData"
 rm -rf ".config/Code - OSS/CachedExtensions"
