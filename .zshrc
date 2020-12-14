@@ -16,7 +16,7 @@ export ZSH="/home/chris/.oh-my-zsh"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Load gitstatus binary
-[[ -d ~/.cache/gitstatus ]] || ln -s ~/.local/opt/gitstatus ~/.cache
+[[ -d ~/.cache/gitstatus ]] || ln -s ~/.local/lib/gitstatus ~/.cache
 
 # Powerlevel10k prompt. To customize, run `p10k configure` or edit ~/.p10k.zsh.
 if [[ "$XDG_SESSION_TYPE" == "tty" ]]; then
