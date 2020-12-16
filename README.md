@@ -5,7 +5,6 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 ## Software used
 
 - [Chromium](https://www.chromium.org/Home)
-- [fcitx5](https://github.com/fcitx/fcitx5)
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 - [Git](https://git-scm.com)
 - [GitHub CLI](https://github.com/cli/cli)
@@ -15,7 +14,7 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
 - [Vim](https://www.vim.org)
-- [Visual Studio Code - Open Source ("Code - OSS")](https://github.com/microsoft/vscode)
+- [Visual Studio Code - Open Source (Code - OSS)](https://github.com/microsoft/vscode)
 - [ZSH](http://zsh.sourceforge.net/)
 
 ## Extras
@@ -35,3 +34,20 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
   - Kernel 5.4 and earlier uses Intel HDA drivers by default. Fix needed to enable all four speakers and proper volume control.
   - Enable top speakers: `/etc/modprobe.d/x1c7-sound.conf`
   - Volume control fix: `/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common`
+
+## Setup
+
+- Clone this repository
+- Symlink dotfiles in the repository to the appropriate location
+- Run the following commands
+
+```bash
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
+
+# Set up Github CLI
+gh auth login
+mkdir "$ZSH_CUSTOM/plugins/gh"
+gh completion -s zsh > "$ZSH_CUSTOM/plugins/gh/_gh"
+```
