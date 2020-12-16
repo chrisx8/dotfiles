@@ -15,6 +15,7 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 - [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
 - [Vim](https://www.vim.org)
 - [Visual Studio Code - Open Source (Code - OSS)](https://github.com/microsoft/vscode)
+- [Yarn](https://yarnpkg.com/)
 - [ZSH](http://zsh.sourceforge.net/)
 
 ## Extras
