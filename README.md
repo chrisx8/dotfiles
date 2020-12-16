@@ -49,6 +49,4 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/th
 
 # Set up Github CLI
 gh auth login
-mkdir "$ZSH_CUSTOM/plugins/gh"
-gh completion -s zsh > "$ZSH_CUSTOM/plugins/gh/_gh"
 ```

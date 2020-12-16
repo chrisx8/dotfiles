@@ -60,7 +60,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git-auto-fetch gh)
+plugins=(git-auto-fetch npm yarn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -73,7 +73,6 @@ export EDITOR='vim'
 # Command completion
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
-complete -C aws_completer aws
 source /etc/bash_completion.d/windscribe_complete
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
