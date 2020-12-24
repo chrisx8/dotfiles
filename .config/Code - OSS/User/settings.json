@@ -2,15 +2,6 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "files.autoSave": "onFocusChange",
-    "files.exclude": {
-        "**/.idea": true,
-        "**/.vscode": true,
-        "**/venv": true,
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
     "terminal.integrated.enableBell": true,
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "markdown.extension.print.absoluteImgPath": false,
@@ -23,7 +14,6 @@
     "markdown.extension.showExplorer": true,
     "workbench.enableExperiments": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
-    "extensions.showRecommendationsOnlyOnDemand": true,
     "cSpell.allowCompoundWords": true,
     "git.showPushSuccessNotification": true,
     "git.enableSmartCommit": true,
@@ -31,4 +21,5 @@
     "window.zoomLevel": 0,
     "git.autofetch": true,
     "python.showStartPage": false,
+    "extensions.ignoreRecommendations": true,
 }
