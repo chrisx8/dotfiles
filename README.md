@@ -38,11 +38,13 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 
 ## Setup
 
-- Clone this repository
-- Symlink dotfiles in the repository to the appropriate location
-- Run the following commands
-
 ```bash
+# Set up repo
+git clone --bare https://github.com/chrisx8/dotfiles.git ~/.dotfiles
+alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+dot checkout
+dot config --local status.showUntrackedFiles no
+
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
