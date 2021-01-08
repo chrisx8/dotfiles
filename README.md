@@ -20,13 +20,14 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 
 ## Extras
 
+The following files are included in [`.dotfiles/extras`](.dotfiles/extras).
+
 - systemd-boot config
   - `/boot/loader`
 - NetworkManager dispatcher scripts
   - `/etc/NetworkManager/dispatcher.d/99-vpn`: Disable IPv6 when VPN is connected
 - Pacman hooks
   - `/etc/pacman.d/hooks/10-code.hook` and `/etc/pacman.d/hooks/product.json.patch`: Patch Code - OSS to use Microsoft VSCode extension store
-  - `/etc/pacman.d/hooks/10-fcitx5.hook`: Disable autostart for fcitx5
   - `/etc/pacman.d/hooks/90-systemd-boot.hook`: Update systemd-boot when systemd updates
 - Audio fixes for ThinkPad X1 Carbon (7th Gen), when using SOF drivers
   - Kernel 5.5 and later should use SOF by default. Installation of `sof-firmware` is required.
