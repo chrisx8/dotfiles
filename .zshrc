@@ -67,9 +67,6 @@ source $ZSH/oh-my-zsh.sh
 # Preferred editor
 export EDITOR='vim'
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # Command completion
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
