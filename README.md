@@ -29,13 +29,6 @@ The following files are included in [`.dotfiles/extras`](.dotfiles/extras).
 - Pacman hooks
   - `/etc/pacman.d/hooks/10-code.hook` and `/etc/pacman.d/hooks/product.json.patch`: Patch Code - OSS to use Microsoft VSCode extension store
   - `/etc/pacman.d/hooks/90-systemd-boot.hook`: Update systemd-boot when systemd updates
-- Audio fixes for ThinkPad X1 Carbon (7th Gen), when using SOF drivers
-  - Kernel 5.5 and later should use SOF by default. Installation of `sof-firmware` is required.
-  - No fix needed on kernel 5.8.12 or later with latest alsa-ucm-conf and PulseAudio 13.99.1 or later.
-- Audio fixes for ThinkPad X1 Carbon (7th Gen), when using Intel HDA drivers
-  - Kernel 5.4 and earlier uses Intel HDA drivers by default. Fix needed to enable all four speakers and proper volume control.
-  - Enable top speakers: `/etc/modprobe.d/x1c7-sound.conf`
-  - Volume control fix: `/usr/share/pulseaudio/alsa-mixer/paths/analog-output.conf.common`
 
 ## Setup
 
