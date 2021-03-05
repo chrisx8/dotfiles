@@ -45,7 +45,7 @@ export UPDATE_ZSH_DAYS=7
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
@@ -60,7 +60,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git-auto-fetch gh npm yarn)
+plugins=(git-auto-fetch npm yarn)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -73,7 +73,6 @@ autoload -Uz bashcompinit && bashcompinit
 source /etc/bash_completion.d/windscribe_complete
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
-eval $(thefuck --alias)
 alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
 alias qr='qrencode -t utf8'
