@@ -2,6 +2,7 @@
 
 echo '##### Cleaning cache... #####'
 rm -rf ~/.cache/*
+rm -rf ~/.config/.cache
 rm -rf "$HOME/.config/chromium/Default/Service Worker"
 rm -rf "$HOME/.config/Code - OSS/Cache"
 rm -rf "$HOME/.config/Code - OSS/CachedData"
