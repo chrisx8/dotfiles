@@ -1,4 +1,6 @@
 {
+    "editor.insertSpaces": false,
+    "editor.renderWhitespace": "all",
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
     "files.autoSave": "onFocusChange",
