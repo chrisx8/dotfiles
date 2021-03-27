@@ -2,6 +2,9 @@
 " properly set to work with the Vim-related packages.
 runtime! archlinux.vim
 
+" load system defaults
+source $VIMRUNTIME/defaults.vim
+
 " general
 set encoding=utf8
 set number
