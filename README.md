@@ -12,6 +12,7 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
+- [systemd-cryptenroll](https://www.freedesktop.org/software/systemd/man/systemd-cryptenroll.html)
 - [Vim](https://www.vim.org)
 - [Visual Studio Code - Open Source (Code - OSS)](https://github.com/microsoft/vscode)
 - [Yarn](https://yarnpkg.com/)
@@ -30,6 +31,8 @@ The following files are included in [`.dotfiles/extras`](.dotfiles/extras).
   - `/etc/pacman.d/hooks/90-systemd-boot.hook`: Update systemd-boot when systemd updates
 
 ## Setup
+
+[Decrypt LUKS2-encrypted root partitions with TPM2](https://gist.github.com/chrisx8/cda23e2d1fa3dcda0d739bc74f600175)
 
 ```bash
 # Set up repo
