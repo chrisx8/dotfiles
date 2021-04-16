@@ -11,6 +11,7 @@ sudo -v
 echo "Resetting DNS..."
 sudo rm -f /etc/resolv.conf.*
 sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+sudo systemctl enable systemd-resolved.service
 sudo systemctl restart systemd-resolved.service
 
 echo "Enabling IPv6..."
