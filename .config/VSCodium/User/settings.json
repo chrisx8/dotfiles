@@ -20,10 +20,7 @@
     "markdown.extension.print.absoluteImgPath": false,
     "markdown.preview.linkify": false,
     "python.showStartPage": false,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
 }

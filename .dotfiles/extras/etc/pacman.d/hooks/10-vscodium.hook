@@ -1,0 +1,10 @@
+[Trigger]
+Type = Package
+Operation = Install
+Operation = Upgrade
+Target = vscodium-bin
+
+[Action]
+Description = Patching /usr/share/vscodium-bin/resources/app/product.json...
+When = PostTransaction
+Exec = /usr/bin/patch -s /usr/share/vscodium-bin/resources/app/product.json /etc/pacman.d/hooks/product.json.patch
