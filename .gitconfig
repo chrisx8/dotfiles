@@ -11,3 +11,8 @@
 	email = email@localhost
 [includeIf "gitdir:/home/chris/Documents/GitHub/"]
 	path = /home/chris/Documents/GitHub/.gitconfig
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
