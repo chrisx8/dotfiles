@@ -68,8 +68,8 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='vim'
 
 # Command completion
-#autoload -Uz compinit && compinit -i
-#autoload -Uz bashcompinit && bashcompinit
+autoload -Uz compinit && compinit -i
+autoload -Uz bashcompinit && bashcompinit
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 alias docker=podman

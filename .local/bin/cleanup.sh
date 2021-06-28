@@ -3,17 +3,17 @@
 echo '##### Cleaning cache... #####'
 rm -rf ~/.cache/*
 rm -rf ~/.config/.cache
-rm -rf $HOME/.config/chromium/*/Service\ Worker
-rm -rf "$HOME/.config/Code - OSS/Cache"
-rm -rf "$HOME/.config/Code - OSS/CachedData"
-rm -rf "$HOME/.config/Code - OSS/CachedExtensions"
-rm -rf "$HOME/.config/Code - OSS/CachedExtensionVSIXs"
-rm -rf "$HOME/.config/Code - OSS/Code Cache"
-rm -rf "$HOME/.config/Code - OSS/GPUCache"
-rm -rf "$HOME/.config/Signal/Cache"
-rm -rf "$HOME/.config/Signal/Code Cache"
-rm -rf "$HOME/.config/Signal/GPUCache"
-rm -rf "$HOME/.config/Signal/temp"
+rm -rf ~/.config/chromium/*/Service\ Worker
+rm -rf ~/.config/VSCodium/Cache
+rm -rf ~/.config/VSCodium/CachedData
+rm -rf ~/.config/VSCodium/CachedExtensions
+rm -rf ~/.config/VSCodium/CachedExtensionVSIXs
+rm -rf ~/.config/VSCodium/Code\ Cache
+rm -rf ~/.config/VSCodium/GPUCache
+rm -rf ~/.config/Signal/Cache
+rm -rf ~/.config/Signal/Code\ Cache
+rm -rf ~/.config/Signal/GPUCache
+rm -rf ~/.config/Signal/temp
 rm -rf ~/.gnome
 rm -rf ~/.local/share/gvfs-metadata
 rm -rf ~/.local/share/virtualenv
