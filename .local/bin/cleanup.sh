@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo '##### Cleaning cache... #####'
-rm -rf ~/.cache/*
+rm -rf ~/.cache/* ~/.cache/.*
 rm -rf ~/.config/.cache
 rm -rf ~/.config/chromium/*/Service\ Worker
 rm -rf ~/.config/VSCodium/Cache
