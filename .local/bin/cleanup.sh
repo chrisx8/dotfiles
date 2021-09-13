@@ -13,7 +13,6 @@ rm -rf ~/.config/VSCodium/GPUCache
 rm -rf ~/.config/Signal/Cache
 rm -rf ~/.config/Signal/Code\ Cache
 rm -rf ~/.config/Signal/GPUCache
-rm -rf ~/.config/Signal/temp
 rm -rf ~/.gnome
 rm -rf ~/.local/share/gvfs-metadata
 rm -rf ~/.local/share/virtualenv
