@@ -1,0 +1,12 @@
+{
+	"RME comment": {
+		"prefix": "rme",
+		"body": [
+			"// REQUIRES: $1",
+			"// MODIFIES: $2",
+			"// EFFECTS: $3",
+			"//  $4"
+		],
+		"description": "RME comment block for C++"
+	}
+}
