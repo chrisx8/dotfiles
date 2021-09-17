@@ -84,4 +84,5 @@ alias docker=podman
 alias pipewire-restart='systemctl restart --user pipewire pipewire-pulse'
 alias qr='qrencode -t utf8'
 alias usevenv='source venv/bin/activate'
+alias yeet='sudo pacman -Rssc'
 alias zshupdate='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull; omz update'
