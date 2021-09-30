@@ -1,4 +1,5 @@
 {
+    "editor.bracketPairColorization.enabled": true,
     "editor.insertSpaces": false,
     "editor.renderWhitespace": "all",
     "explorer.confirmDragAndDrop": false,
@@ -10,7 +11,7 @@
     "git.showPushSuccessNotification": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "terminal.external.linuxExec": "gnome-terminal",
+    "terminal.external.linuxExec": "konsole",
     "terminal.integrated.enableBell": true,
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "workbench.enableExperiments": false,
