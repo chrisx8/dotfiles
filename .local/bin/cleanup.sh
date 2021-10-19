@@ -4,15 +4,12 @@ echo '##### Cleaning cache... #####'
 rm -rf ~/.cache/* ~/.cache/.*
 rm -rf ~/.config/.cache
 rm -rf ~/.config/chromium/*/Service\ Worker
-rm -rf ~/.config/VSCodium/Cache
-rm -rf ~/.config/VSCodium/CachedData
-rm -rf ~/.config/VSCodium/CachedExtensions
-rm -rf ~/.config/VSCodium/CachedExtensionVSIXs
-rm -rf ~/.config/VSCodium/Code\ Cache
-rm -rf ~/.config/VSCodium/GPUCache
-rm -rf ~/.config/Signal/Cache
-rm -rf ~/.config/Signal/Code\ Cache
-rm -rf ~/.config/Signal/GPUCache
+rm -rf ~/.config/VSCodium/*Cache*
+rm -rf ~/.config/VSCodium/logs
+rm -rf ~/.config/VSCodium/Service\ Worker
+rm -rf ~/.config/Signal/*Cache*
+rm -rf ~/.config/Signal/logs
+rm -rf ~/.config/Signal/temp
 rm -rf ~/.gnome
 rm -rf ~/.local/share/gvfs-metadata
 rm -rf ~/.local/share/RecentDocuments

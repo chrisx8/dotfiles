@@ -17,10 +17,8 @@
     "workbench.enableExperiments": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
     "cSpell.allowCompoundWords": true,
-    "python.pythonPath": "/usr/bin/python3",
     "markdown.extension.print.absoluteImgPath": false,
     "markdown.preview.linkify": false,
-    "python.showStartPage": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
