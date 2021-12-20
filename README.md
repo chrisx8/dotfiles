@@ -13,7 +13,7 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
 - [systemd-cryptenroll](https://www.freedesktop.org/software/systemd/man/systemd-cryptenroll.html)
-- [Vim](https://www.vim.org)
+- [Neovim](https://neovim.io/)
 - [VSCodium](https://vscodium.com/)
 - [Yarn](https://yarnpkg.com/)
 - [ZSH](http://zsh.sourceforge.net/)

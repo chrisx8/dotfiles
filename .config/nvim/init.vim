@@ -1,10 +1,3 @@
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages.
-runtime! archlinux.vim
-
-" load system defaults
-source $VIMRUNTIME/defaults.vim
-
 " general
 set encoding=utf8
 set number
@@ -24,3 +17,6 @@ set statusline=\ %F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:
 
 " regex
 set magic
+
+" enable clipboard
+set clipboard+=unnamedplus
