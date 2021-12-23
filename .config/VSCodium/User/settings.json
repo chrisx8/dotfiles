@@ -23,4 +23,6 @@
         "*.ipynb": "jupyter.notebook.ipynb"
     },
     "diffEditor.ignoreTrimWhitespace": false,
+    "redhat.telemetry.enabled": false,
+    "ansible.ansible.useFullyQualifiedCollectionNames": false,
 }
