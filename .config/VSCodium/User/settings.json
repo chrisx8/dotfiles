@@ -2,6 +2,7 @@
     "editor.bracketPairColorization.enabled": true,
     "editor.insertSpaces": false,
     "editor.renderWhitespace": "all",
+    "editor.rulers": [80, 120],
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
     "files.autoSave": "onFocusChange",
@@ -9,8 +10,7 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
     "git.showPushSuccessNotification": true,
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "terminal.external.linuxExec": "konsole",
     "terminal.integrated.enableBell": true,
     "terminal.integrated.fontFamily": "MesloLGS NF",
@@ -21,6 +21,9 @@
     "markdown.preview.linkify": false,
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#363636"
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "redhat.telemetry.enabled": false,
