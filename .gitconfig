@@ -2,7 +2,7 @@
 	autocrlf = input
 	symlinks = true
 [credential]
-	helper = /usr/lib/git-core/git-credential-libsecret
+	helper = libsecret
 [init]
 	defaultBranch = main
 [pull]

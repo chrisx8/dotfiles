@@ -1,6 +1,6 @@
 # dotfiles
 
-Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
+Dotfiles for my [Fedora](https://getfedora.org/) installation.
 
 ## Software used
 
@@ -11,8 +11,6 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 - [NetworkManager](https://gitlab.freedesktop.org/NetworkManager/NetworkManager)
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- [systemd-boot](https://www.freedesktop.org/wiki/Software/systemd/systemd-boot/)
-- [systemd-cryptenroll](https://www.freedesktop.org/software/systemd/man/systemd-cryptenroll.html)
 - [Neovim](https://neovim.io/)
 - [VSCodium](https://vscodium.com/)
 - [Yarn](https://yarnpkg.com/)
@@ -22,17 +20,10 @@ Dotfiles for my [Arch Linux](https://www.archlinux.org/) installation.
 
 The following files are included in [`.dotfiles/extras`](.dotfiles/extras).
 
-- systemd-boot config
-  - `/boot/loader`
 - NetworkManager dispatcher scripts
   - `/etc/NetworkManager/dispatcher.d/99-vpn`: Disable IPv6 when VPN is connected
-- Pacman hooks
-  - `/etc/pacman.d/hooks/10-code.hook` and `/etc/pacman.d/hooks/product.json.patch`: Patch Code - OSS to use Microsoft VSCode extension store
-  - `/etc/pacman.d/hooks/90-systemd-boot.hook`: Update systemd-boot when systemd updates
 
 ## Setup
-
-[Decrypt LUKS2-encrypted root partitions with TPM2](https://gist.github.com/chrisx8/cda23e2d1fa3dcda0d739bc74f600175)
 
 ```bash
 # Set up repo

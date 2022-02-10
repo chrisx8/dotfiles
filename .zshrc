@@ -13,6 +13,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH"
+source $HOME/.cargo/env
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/chris/.oh-my-zsh"
@@ -83,7 +84,18 @@ alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bol
 alias docker=podman
 alias pipewire-restart='systemctl restart --user pipewire pipewire-pulse'
 alias qr='qrencode -t utf8'
+alias usepwnenv='source ~/.local/lib/pwnenv/bin/activate'
 alias usevenv='source venv/bin/activate'
-alias yay=paru
-alias yeet='sudo pacman -Rssc'
+alias yeet='sudo dnf remove'
 alias zshupdate='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull; omz update'
+
+function yay() {
+	if [[ -z "$@" ]]; then
+		echo "==> Updating system packages..."
+		sudo dnf update
+		echo "==> Updating Flatpak packages..."
+		flatpak update
+	else
+		sudo dnf install $@
+	fi
+}
