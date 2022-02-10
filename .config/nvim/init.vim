@@ -4,7 +4,6 @@ set showmatch
 set number
 set cursorline
 set ttyfast
-set spell
 syntax on
 
 " indentation

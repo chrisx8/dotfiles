@@ -14,6 +14,8 @@
 	path = /home/chris/Documents/GitHub/.gitconfig
 [includeIf "gitdir:/home/chris/Documents/AUR/"]
 	path = /home/chris/Documents/AUR/.gitconfig
+[includeIf "gitdir:/home/chris/Documents/eecs/"]
+	path = /home/chris/Documents/eecs/.gitconfig
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
