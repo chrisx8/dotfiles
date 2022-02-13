@@ -13,7 +13,13 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH"
-source $HOME/.cargo/env
+source "$HOME/.cargo/env"
+
+# Load aliases
+[[ -f ~/.alias ]] && source ~/.alias
+
+# Preferred editor
+export EDITOR=nvim
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/chris/.oh-my-zsh"
@@ -71,31 +77,6 @@ plugins=(git-auto-fetch completions)
 
 source $ZSH/oh-my-zsh.sh
 
-# Preferred editor
-export EDITOR=nvim
-
 # Command completion
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
-alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
-alias docker=podman
-alias pipewire-restart='systemctl restart --user pipewire pipewire-pulse'
-alias qr='qrencode -t utf8'
-alias usepwnenv='source ~/.local/lib/pwnenv/bin/activate'
-alias usevenv='source venv/bin/activate'
-alias yeet='sudo dnf remove'
-alias zshupdate='git -C ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k pull; omz update'
-
-function yay() {
-	if [[ -z "$@" ]]; then
-		echo "==> Updating system packages..."
-		sudo dnf update
-		echo "==> Updating Flatpak packages..."
-		flatpak update
-	else
-		sudo dnf install $@
-	fi
-}
