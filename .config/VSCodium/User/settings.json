@@ -1,6 +1,6 @@
 {
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.bracketPairColorization.enabled": true,
-    "editor.insertSpaces": false,
     "editor.rulers": [80, 120],
     "explorer.confirmDragAndDrop": false,
     "extensions.ignoreRecommendations": true,
@@ -10,21 +10,22 @@
     "git.enableSmartCommit": true,
     "git.showPushSuccessNotification": true,
     "telemetry.telemetryLevel": "off",
-    "terminal.external.linuxExec": "konsole",
     "terminal.integrated.enableBell": true,
     "terminal.integrated.fontFamily": "MesloLGS NF",
-    "workbench.enableExperiments": false,
-    "workbench.settings.enableNaturalLanguageSearch": false,
-    "cSpell.allowCompoundWords": true,
-    "markdown.extension.print.absoluteImgPath": false,
-    "markdown.preview.linkify": false,
-    "workbench.editorAssociations": {
-        "*.ipynb": "jupyter.notebook.ipynb"
-    },
     "workbench.colorCustomizations": {
         "editorRuler.foreground": "#363636"
     },
-    "diffEditor.ignoreTrimWhitespace": false,
-    "redhat.telemetry.enabled": false,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
     "ansible.ansible.useFullyQualifiedCollectionNames": false,
+    "cSpell.allowCompoundWords": true,
+    "markdown.extension.print.absoluteImgPath": false,
+    "markdown.preview.linkify": false,
+    "redhat.telemetry.enabled": false,
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
 }
