@@ -9,6 +9,7 @@ Dotfiles for my [Fedora](https://getfedora.org/) installation.
 - [Git](https://git-scm.com)
 - [GitHub CLI](https://github.com/cli/cli)
 - [NetworkManager](https://gitlab.freedesktop.org/NetworkManager/NetworkManager)
+- [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm)
 - [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [Neovim](https://neovim.io/)
