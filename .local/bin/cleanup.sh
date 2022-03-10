@@ -3,6 +3,8 @@
 echo '##### Cleaning cache... #####'
 rm -rf ~/.cache/* ~/.cache/.*
 rm -rf ~/.config/.cache
+rm -rf ~/.config/chromium/*/Service\ Worker
+rm -rf ~/.config/chromium/Guest\ Profile
 rm -rf ~/.config/VSCodium/*Cache*
 rm -rf ~/.config/VSCodium/logs
 rm -rf ~/.config/VSCodium/Service\ Worker

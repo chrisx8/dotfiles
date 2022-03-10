@@ -1,4 +1,1 @@
-#!/bin/sh
-# Wrapper for Chromium Flatpak that includes a few extra flgas
-
-flatpak run org.chromium.Chromium --disable-hyperlink-auditing --force-dark-mode --enable-features=WebUIDarkMode,VaapiVideoDecoder $@ 
+chromium-freeworld
