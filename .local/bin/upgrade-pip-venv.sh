@@ -1,6 +1,8 @@
 #!/bin/bash
 
 if [[ -f requirements.txt ]] && [[ -d "$VIRTUAL_ENV" ]]; then
+	echo "Upgrading pip and wheel..."
+	pip install -U pip wheel
 	echo "Upgrading all outdated packages..."
 	pip install -U $(pip list --outdated --format=freeze | cut -d = -f 1)
 	pip freeze > requirements.txt
