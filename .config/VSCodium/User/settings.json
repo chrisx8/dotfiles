@@ -1,5 +1,4 @@
 {
-    "diffEditor.ignoreTrimWhitespace": false,
     "editor.bracketPairColorization.enabled": true,
     "editor.rulers": [80, 120],
     "explorer.confirmDragAndDrop": false,

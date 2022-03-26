@@ -18,6 +18,11 @@ else
 	echo "docker-compose $ver is up-to-date"
 fi
 echo
+echo "### nvm"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm install --lts
+echo
 echo "### rustup"
 rustup upgrade
 echo
