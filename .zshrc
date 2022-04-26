@@ -1,9 +1,3 @@
-# Load GNOME Keyring daemon
-if [ -n "$DESKTOP_SESSION" ];then
-	eval $(gnome-keyring-daemon --start)
-	export SSH_AUTH_SOCK
-fi
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -13,7 +7,6 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH"
-source "$HOME/.cargo/env"
 
 # Load aliases
 [[ -f ~/.alias ]] && source ~/.alias
@@ -22,7 +15,7 @@ source "$HOME/.cargo/env"
 export EDITOR=nvim
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/chris/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -32,11 +25,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 [[ -d ~/.cache/gitstatus ]] || ln -s ~/.local/lib/gitstatus ~/.cache
 
 # Powerlevel10k prompt. To customize, run `p10k configure` or edit ~/.p10k.zsh.
-if [[ "$XDG_SESSION_TYPE" == "tty" ]]; then
-	[[ -f ~/.p10k-ascii.zsh ]] && source ~/.p10k-ascii.zsh
-else
-	[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
-fi
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -73,15 +62,10 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git-auto-fetch completions)
+plugins=(git-auto-fetch)
 
 source $ZSH/oh-my-zsh.sh
 
 # Command completion
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
