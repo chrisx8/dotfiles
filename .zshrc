@@ -14,6 +14,9 @@ export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH"
 # Preferred editor
 export EDITOR=nvim
 
+# GPG terminal
+export GPG_TTY="$TTY"
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 

@@ -17,7 +17,7 @@ echo -e '\n##### Cleaning system packages... #####'
 sudo dnf autoremove
 sudo dnf clean packages
 
-echo -e '\n##### Cleaning system packages... #####'
+echo -e '\n##### Trimming disk... #####'
 sudo fstrim -av
 
 exit 0 

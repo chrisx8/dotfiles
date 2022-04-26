@@ -1,6 +1,8 @@
 alias docker=podman
-alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
 alias qr='qrencode -t utf8'
 alias usevenv='source venv/bin/activate'
+alias vi=nvim
+alias vim=nvim
 alias yay='~/.local/bin/upgrade-all.sh'

@@ -2,7 +2,7 @@
 	autocrlf = input
 	symlinks = true
 [credential]
-	helper = libsecret
+	helper = store
 [init]
 	defaultBranch = main
 [pull]
@@ -10,14 +10,14 @@
 [user]
 	name = Chris
 	email = email@localhost
-[includeIf "gitdir:/home/chris/Documents/gitea.chrisx.xyz/"]
-	path = /home/chris/Documents/gitea.chrisx.xyz/.gitconfig
-[includeIf "gitdir:/home/chris/Documents/github.com/"]
-	path = /home/chris/Documents/github.com/.gitconfig
-[includeIf "gitdir:/home/chris/Documents/aur.archlinux.org/"]
-	path = /home/chris/Documents/aur.archlinux.org/.gitconfig
-[includeIf "gitdir:/home/chris/Documents/gitlab.eecs.umich.edu/"]
-	path = /home/chris/Documents/gitlab.eecs.umich.edu/.gitconfig
+[includeIf "gitdir:/home/chris.linux/gitea.chrisx.xyz/"]
+	path = /home/chris.linux/gitea.chrisx.xyz/.gitconfig
+[includeIf "gitdir:/home/chris.linux/github.com/"]
+	path = /home/chris.linux/github.com/.gitconfig
+[includeIf "gitdir:/home/chris.linux/aur.archlinux.org/"]
+	path = /home/chris.linux/aur.archlinux.org/.gitconfig
+[includeIf "gitdir:/home/chris.linux/gitlab.eecs.umich.edu/"]
+	path = /home/chris.linux/gitlab.eecs.umich.edu/.gitconfig
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
