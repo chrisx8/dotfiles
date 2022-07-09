@@ -31,10 +31,13 @@ set clipboard+=unnamedplus
 
 " plugins
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
-	Plug 'scrooloose/nerdtree'
-	Plug 'bling/vim-airline'
-	Plug 'tpope/vim-fugitive'
 	Plug 'airblade/vim-gitgutter'
+	Plug 'dense-analysis/ale'
+	Plug 'itchyny/lightline.vim'
+	Plug 'preservim/nerdtree'
+	Plug 'vim-scripts/SearchComplete'
+	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+	Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " plugin config
