@@ -6,7 +6,7 @@
 [init]
 	defaultBranch = main
 [pull]
-	rebase = false
+	rebase = true
 [user]
 	name = Chris
 	email = email@localhost

@@ -5,13 +5,6 @@ alias qr='qrencode -t utf8'
 alias usevenv='source venv/bin/activate'
 alias vi=nvim
 alias vim=nvim
+alias yay='~/.local/bin/upgrade-all.sh'
+alias yayy='sudo dnf install'
 alias yeet='sudo dnf remove'
-
-function yay() {
-    if [ "$#" -eq 0 ]
-    then
-        ~/.local/bin/upgrade-all.sh
-    else
-        sudo dnf install "$@"
-    fi
-}
