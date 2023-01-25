@@ -1,7 +1,6 @@
 #!/bin/bash
 
 echo '##### Cleaning cache... #####'
-rm -rf ~/.cache/* ~/.cache/.*
 rm -rf ~/.config/.cache
 rm -rf ~/.local/share/virtualenv
 rm -rf ~/.npm
