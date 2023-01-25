@@ -1,6 +1,9 @@
+alias bwcheck='bw unlock --check'
+alias bwunlock='export BW_SESSION="$(bw unlock --raw)"'
 alias docker=podman
-alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
+alias ghpw='gh pr view -w'
+alias ghrw='gh repo view -w'
 alias qr='qrencode -t utf8'
 alias usevenv='source venv/bin/activate'
 alias vi=nvim
