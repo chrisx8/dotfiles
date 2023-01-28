@@ -1,20 +1,24 @@
 [core]
 	autocrlf = input
 	symlinks = true
-[credential]
-	helper = store
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
 [init]
 	defaultBranch = main
 [pull]
 	rebase = true
-[includeIf "gitdir:/home/chrisx/Git/gitea.chrisx.xyz/"]
-	path = /home/chrisx/Git/gitea.chrisx.xyz/.gitconfig
-[includeIf "gitdir:/home/chrisx/Git/github.com/"]
-	path = /home/chrisx/Git/github.com/.gitconfig
-[includeIf "gitdir:/home/chrisx/Git/aur.archlinux.org/"]
-	path = /home/chrisx/Git/aur.archlinux.org/.gitconfig
-[includeIf "gitdir:/home/chrisx/Git/gitlab.eecs.umich.edu/"]
-	path = /home/chrisx/Git/gitlab.eecs.umich.edu/.gitconfig
+[includeIf "gitdir:/home/chris/Git/gitea.chrisx.xyz/"]
+	path = /home/chris/Git/gitea.chrisx.xyz/.gitconfig
+[includeIf "gitdir:/home/chris/Git/github.com/"]
+	path = /home/chris/Git/github.com/.gitconfig
+[includeIf "gitdir:/home/chris/Git/aur.archlinux.org/"]
+	path = /home/chris/Git/aur.archlinux.org/.gitconfig
+[includeIf "gitdir:/home/chris/Git/gitlab.eecs.umich.edu/"]
+	path = /home/chris/Git/gitlab.eecs.umich.edu/.gitconfig
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

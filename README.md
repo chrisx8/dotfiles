@@ -1,6 +1,9 @@
 # dotfiles
 
-Dotfiles for my [Fedora](https://getfedora.org/) VM.
+## Setup
+
+- Clone repo
+- Run `./setup.sh`
 
 ## Software used
 
@@ -9,8 +12,3 @@ Dotfiles for my [Fedora](https://getfedora.org/) VM.
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [Neovim](https://neovim.io/)
 - [ZSH](http://zsh.sourceforge.net/)
-
-## Setup
-
-- Clone repo
-- Run `./setup.sh`

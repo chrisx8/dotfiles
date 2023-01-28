@@ -1,13 +1,14 @@
 alias bwcheck='bw unlock --check'
+alias bwlock='bw lock'
 alias bwunlock='export BW_SESSION="$(bw unlock --raw)"'
 alias docker=podman
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
+alias gitpuf="git push --force-with-lease"
 alias ghpw='gh pr view -w'
 alias ghrw='gh repo view -w'
 alias qr='qrencode -t utf8'
 alias usevenv='source venv/bin/activate'
 alias vi=nvim
 alias vim=nvim
-alias yay='~/.local/bin/upgrade-all.sh'
-alias yayy='sudo dnf install'
+alias yayy='~/.local/bin/packagemgr.sh'
 alias yeet='sudo dnf remove'

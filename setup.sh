@@ -2,9 +2,10 @@
 set -e
 
 # Link dotfiles
-ln -sf $(find "$(pwd)" -type f -name '.*') "$HOME"
-ln -sf "$(pwd)/.config/nvim/init.vim" "$HOME/.config/nvim/init.vim"
-ln -sf "$(pwd)/.local/bin/*.sh" "$HOME/.local/bin"
+find "$(pwd)" -type f -name '.*' -exec ln -sfv "{}" "$HOME" ";"
+find "$(pwd)/.local/bin" -type f -exec ln -sfv "{}" "$HOME/.local/bin" ";"
+ln -sfv "$(pwd)/.config/chromium-flags.conf" "$HOME/.config/chromium-flags.conf"
+ln -sfv "$(pwd)/.config/nvim/init.vim" "$HOME/.config/nvim/init.vim"
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
