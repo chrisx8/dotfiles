@@ -22,8 +22,9 @@ function pkg_upgrade() {
 }
 
 # Detect OS
-eval "$(grep ^ID= /etc/os-release)"
+eval "$(grep ^ID= /etc/os-release 2> /dev/null)"
 echo "Detected OS: $ID"
+
 # Install or Upgrade
 if [ -z "$@" ]; then
 	pkg_upgrade

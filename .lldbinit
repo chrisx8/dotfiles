@@ -1,0 +1,2 @@
+settings set target.load-cwd-lldbinit true
+pro hand -p false -s false SIGUSR1
