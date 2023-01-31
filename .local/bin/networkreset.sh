@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-if [[ "$@" == "--config" ]]; then
+if [[ "$*" = "--config" ]]; then
 	echo "Please disconnect from VPNs before continuing."
-	read -p "Press Enter to continue..."
+	read -r -p "Press Enter to continue..."
 	echo
 fi
 sudo -v

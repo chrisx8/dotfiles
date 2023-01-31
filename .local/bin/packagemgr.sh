@@ -1,14 +1,20 @@
 #!/bin/zsh
 
 function pkg_install() {
-	[ "$ID" = "arch" ] && yay -S "$@"
-	[ "$ID" = "fedora" ] && sudo dnf install "$@"
+	if [ "$ID" = "arch" ] || [ "$ID" = "archarm" ]; then
+		yay -S "$@"
+	elif [ "$ID" = "fedora" ]; then
+		sudo dnf install "$@"
+	fi
 }
 
 function pkg_upgrade() {
 	echo "==> Updating system packages..."
-	[ "$ID" = "arch" ] && yay -Syu
-	[ "$ID" = "fedora" ] && sudo dnf upgrade
+	if [ "$ID" = "arch" ] || [ "$ID" = "archarm" ]; then
+		yay -Syu
+	elif [ "$ID" = "fedora" ]; then
+		sudo dnf upgrade
+	fi
 	echo
 	echo "==> Updating user applications..."
 	echo "### rustup"

@@ -27,12 +27,12 @@ rm -f ~/.viminfo
 rm -f ~/.*_history
 
 echo -e '\n##### Cleaning system packages... #####'
-if [ "$ID" = "arch" ]; then
-    pacman -Qdtq | sudo pacman -Rs -
-    yes | yay -Scc
+if [ "$ID" = "arch" ] || [ "$ID" = "archarm" ]; then
+	pacman -Qdtq | sudo pacman -Rs -
+	yes | yay -Scc
 elif [ "$ID" = "fedora" ]; then
-    sudo dnf autoremove
-    sudo dnf clean packages
+	sudo dnf autoremove
+	sudo dnf clean packages
 fi
 
 echo -e '\n##### Trimming disk... #####'
