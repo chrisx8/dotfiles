@@ -8,13 +8,15 @@ alias qr='qrencode -t utf8'
 alias usevenv='source venv/bin/activate'
 alias vi=nvim
 alias vim=nvim
-alias yayy='~/.local/bin/packagemgr.sh'
+alias yayyy='~/.local/bin/pkgupgrade.sh'
 
 # OS-dependent aliases
 eval "$(grep ^ID= /etc/os-release 2> /dev/null)"
 if [ "$ID" = "arch" ] || [ "$ID" = "archarm" ]; then
+	alias yayy='yay -S'
 	alias yeet='sudo pacman -Rsc'
 elif [ "$ID" = "fedora" ]; then
+	alias yayy='sudo dnf install'
 	alias yeet='sudo dnf remove'
 fi
 unset ID
