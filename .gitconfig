@@ -11,14 +11,14 @@
 	defaultBranch = main
 [pull]
 	rebase = true
+[includeIf "gitdir:~/Git/aur.archlinux.org/"]
+	path = ~/Git/aur.archlinux.org/.gitconfig
 [includeIf "gitdir:~/Git/gitea.chrisx.xyz/"]
 	path = ~/Git/gitea.chrisx.xyz/.gitconfig
 [includeIf "gitdir:~/Git/github.com/"]
 	path = ~/Git/github.com/.gitconfig
-[includeIf "gitdir:~/Git/aur.archlinux.org/"]
-	path = ~/Git/aur.archlinux.org/.gitconfig
-[includeIf "gitdir:~/Git/gitlab.eecs.umich.edu/"]
-	path = ~/Git/gitlab.eecs.umich.edu/.gitconfig
+[includeIf "gitdir:~/Git/gitlab.com/"]
+	path = ~/Git/gitlab.com/.gitconfig
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
