@@ -1,16 +1,13 @@
 [core]
 	autocrlf = input
 	symlinks = true
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
+	excludesFile = ~/.gitignore
 [init]
 	defaultBranch = main
 [pull]
 	rebase = true
+[include]
+    path = ~/.gitconfig_credential
 [includeIf "gitdir:~/Git/aur.archlinux.org/"]
 	path = ~/Git/aur.archlinux.org/.gitconfig
 [includeIf "gitdir:~/Git/gitea.chrisx.xyz/"]

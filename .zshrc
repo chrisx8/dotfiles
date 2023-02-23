@@ -8,14 +8,8 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH="$HOME/.local/bin:$HOME/.yarn/bin:$PATH"
 
-# Load aliases
-[[ -f ~/.alias ]] && source ~/.alias
-
 # Preferred editor
 export EDITOR=nvim
-
-# GPG terminal
-export GPG_TTY="$TTY"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -23,6 +17,9 @@ export ZSH="$HOME/.oh-my-zsh"
 # Set name of the theme to load
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Load aliases
+[[ ! -f ~/.alias ]] || source ~/.alias
 
 # Load gitstatus binary
 [[ -d ~/.cache/gitstatus ]] || ln -s ~/.local/lib/gitstatus ~/.cache
@@ -64,7 +61,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -79,5 +76,12 @@ source $ZSH/oh-my-zsh.sh
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
 
+# Load Homebrew completions
+if type brew &>/dev/null; then
+	FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
 # :)
-eval $(thefuck --alias)
+if type thefuck &>/dev/null; then
+	eval $(thefuck --alias)
+fi

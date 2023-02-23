@@ -10,16 +10,25 @@ alias vi=nvim
 alias vim=nvim
 alias yayyy='~/.local/bin/pkgupgrade.sh'
 
-# OS-dependent aliases
-eval "$(grep ^ID= /etc/os-release 2> /dev/null)"
-if [ "$ID" = "arch" ] || [ "$ID" = "archarm" ]; then
-	alias yayy='yay -S'
-	alias yeet='sudo pacman -Rsc'
-elif [ "$ID" = "fedora" ]; then
+# OS-dependent package manager aliases
+if type brew &> /dev/null; then
+	alias yayy='brew install'
+	alias yeet='brew uninstall'
+elif type dnf &> /dev/null; then
 	alias yayy='sudo dnf install'
 	alias yeet='sudo dnf remove'
+elif type pacman &> /dev/null; then
+	alias yayy='yay -S'
+	alias yeet='sudo pacman -Rsc'
 fi
-unset ID
+
+# MacOS aliases
+if [ "$(uname -s)" = "Darwin" ]; then
+	alias limastart='limactl start fedora && lima'
+	alias limastop='limactl stop fedora'
+	alias sha256sum='shasum -a 256'
+	alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
+fi
 
 # Only in non-TTY shells
 if [ "$XDG_SESSION_TYPE" != "tty" ]; then

@@ -1,20 +1,21 @@
 #!/bin/zsh
 
-# Detect OS
-eval "$(grep ^ID= /etc/os-release 2> /dev/null)"
-echo "Detected OS: $ID"
-
 echo "==> Updating system packages..."
-if [ "$ID" = "arch" ] || [ "$ID" = "archarm" ]; then
-    yay -Syu
-elif [ "$ID" = "fedora" ]; then
-    sudo dnf upgrade
+if type brew &> /dev/null; then
+	brew update
+	brew upgrade
+elif type dnf &> /dev/null; then
+	sudo dnf upgrade
+elif type pacman &> /dev/null; then
+	yay -Syu
 fi
 echo
 echo "==> Updating user applications..."
-echo "### rustup"
-rustup upgrade
-echo
+if type rustup &> /dev/null; then
+	echo "### rustup"
+	rustup upgrade
+	echo
+fi
 echo "### powerlevel10k"
 git -C "$ZSH/custom/themes/powerlevel10k" pull
 echo

@@ -1,0 +1,47 @@
+{
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.fontSize": 13,
+  "editor.formatOnSave": true,
+  "editor.rulers": [80, 120],
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "files.autoSave": "onFocusChange",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.showPushSuccessNotification": true,
+  "telemetry.telemetryLevel": "off",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.enableBell": true,
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 13,
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#404040"
+  },
+  "workbench.colorTheme": "Default Dark+ Experimental",
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4, NamespaceIndentation: All, FixNamespaceComments: false }",
+  "C_Cpp.default.cppStandard": "c++17",
+  "C_Cpp.default.cStandard": "c99",
+  "cSpell.allowCompoundWords": true,
+  "gitlens.telemetry.enabled": false,
+  "markdown.extension.print.absoluteImgPath": false,
+  "markdown.preview.linkify": false,
+  "redhat.telemetry.enabled": false,
+  "vim.changeWordIncludesWhitespace": true,
+  "vim.enableNeovim": true,
+  "vim.useSystemClipboard": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  }
+}
