@@ -72,10 +72,6 @@ plugins=()
 
 source $ZSH/oh-my-zsh.sh
 
-# Command completion
-autoload -Uz compinit && compinit -i
-autoload -Uz bashcompinit && bashcompinit
-
 # Load Homebrew completions
 if type brew &>/dev/null; then
 	FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
@@ -85,3 +81,7 @@ fi
 if type thefuck &>/dev/null; then
 	eval $(thefuck --alias)
 fi
+
+# Command completion
+autoload -Uz compinit && compinit -i
+autoload -Uz bashcompinit && bashcompinit
