@@ -28,6 +28,7 @@
   "gitlens.telemetry.enabled": false,
   "markdown.extension.print.absoluteImgPath": false,
   "markdown.preview.linkify": false,
+  "python.analysis.typeCheckingMode": "strict",
   "redhat.telemetry.enabled": false,
   "vim.changeWordIncludesWhitespace": true,
   "vim.enableNeovim": true,

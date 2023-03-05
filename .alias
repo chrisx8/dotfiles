@@ -3,7 +3,6 @@ alias bwlock='bw lock'
 alias bwunlock='export BW_SESSION="$(bw unlock --raw)"'
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
 alias gitpuf="git push --force-with-lease"
-alias open=xdg-open
 alias qr='qrencode -t utf8'
 alias usevenv='source venv/bin/activate'
 alias vi=nvim
