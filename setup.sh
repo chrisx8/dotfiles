@@ -20,12 +20,12 @@ fi
 
 # Create Git credential helper config
 if [ "$ID" = "Darwin" ]; then
-	cat > ~/.gitconfig_credential <<EOF
+	cat > ~/.gitconfig_local <<EOF
 [credential]
 	helper = osxkeychain
 EOF
 else
-	cat > ~/.gitconfig_credential <<EOF
+	cat > ~/.gitconfig_local <<EOF
 [credential "https://github.com"]
 	helper =
 	helper = !/usr/bin/gh auth git-credential
@@ -34,6 +34,14 @@ else
 	helper = !/usr/bin/gh auth git-credential
 EOF
 fi
+
+# Create Git remote-specific config
+for dir in ~/Git/*; do
+	cat >> ~/.gitconfig_local <<EOF
+[includeIf "gitdir:$dir/"]
+	path = $dir/.gitconfig
+EOF
+done
 
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
