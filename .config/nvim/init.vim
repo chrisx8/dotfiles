@@ -38,9 +38,12 @@ set omnifunc=ale#completion#OmniFunc
 set wildmode=longest,list
 
 " keyboard shortcuts
-nnoremap <leader>n :NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
+nnoremap <C-S-f> :NERDTreeFind<CR>
+nnoremap <C-S-t> :NERDTreeFocus<CR>
+nnoremap <C-n> :tabnew<CR>
+nnoremap <C-w> :tabclose<CR>
+nnoremap <C-S-n> :tabNext<CR>
 
 " enable clipboard
 set clipboard+=unnamedplus
@@ -49,14 +52,13 @@ set clipboard+=unnamedplus
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 	Plug 'airblade/vim-gitgutter'
 	Plug 'dense-analysis/ale'
-"	Plug 'honza/vim-snippets'
 	Plug 'itchyny/lightline.vim'
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 	Plug 'preservim/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
-"	Plug 'SirVer/ultisnips'
 	Plug 'vim-scripts/SearchComplete'
 	Plug 'tpope/vim-fugitive'
-    Plug 'w0ng/vim-hybrid'
+	Plug 'w0ng/vim-hybrid'
 call plug#end()
 
 " plugin config

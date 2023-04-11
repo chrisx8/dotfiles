@@ -16,7 +16,7 @@
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.fontSize": 13,
   "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#404040"
+    "editorRuler.foreground": "#363636"
   },
   "workbench.colorTheme": "Default Dark+ Experimental",
   "workbench.enableExperiments": false,
@@ -25,14 +25,18 @@
   "C_Cpp.default.cppStandard": "c++17",
   "C_Cpp.default.cStandard": "c99",
   "cSpell.allowCompoundWords": true,
+  "gitlens.plusFeatures.enabled": false,
   "gitlens.telemetry.enabled": false,
   "markdown.extension.print.absoluteImgPath": false,
   "markdown.preview.linkify": false,
-  "python.analysis.typeCheckingMode": "strict",
+  "python.analysis.typeCheckingMode": "basic",
   "redhat.telemetry.enabled": false,
   "vim.changeWordIncludesWhitespace": true,
   "vim.enableNeovim": true,
   "vim.useSystemClipboard": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -41,6 +45,11 @@
   },
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
