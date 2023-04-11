@@ -1,0 +1,24 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: check-case-conflict
+      - id: check-executables-have-shebangs
+      - id: check-shebang-scripts-are-executable
+      - id: check-merge-conflict
+      - id: check-symlinks
+      - id: check-vcs-permalinks
+      - id: destroyed-symlinks
+      - id: forbid-submodules
+      - id: mixed-line-ending
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 3.0.0
+    hooks:
+      - id: forbid-binary
+      - id: forbid-space-in-indent
+        exclude: (\.p10k.*\.zsh)|(.+\.json)|(.+\.yaml)
+      - id: shellcheck
+        exclude: (.*\.zsh.*)|(\.zprofile)|(pkgupgrade\.sh)|(mkicns\.sh)

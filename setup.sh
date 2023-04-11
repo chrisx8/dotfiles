@@ -27,10 +27,10 @@ EOF
 else
 	cat > ~/.gitconfig_credential <<EOF
 [credential "https://github.com"]
-	helper = 
+	helper =
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
-	helper = 
+	helper =
 	helper = !/usr/bin/gh auth git-credential
 EOF
 fi
