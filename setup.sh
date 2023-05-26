@@ -8,7 +8,9 @@ echo "Detected OS: $ID"
 
 # Link dotfiles
 find "$(pwd)" -type f -name '.*' -exec ln -sfv "{}" "$HOME" ";"
+mkdir -p "$HOME/.local/bin"
 find "$(pwd)/.local/bin" -type f -exec ln -sfv "{}" "$HOME/.local/bin" ";"
+mkdir -p "$HOME/.config/nvim"
 ln -sfv "$(pwd)/.config/nvim/init.vim" "$HOME/.config/nvim/init.vim"
 
 # Link OS-dependent dotfiles
@@ -17,6 +19,9 @@ if [ "$ID" = "arch" ] || [ "$ID" = "archarm" ]; then
 elif [ "$ID" = "Darwin" ]; then
 	ln -sfv "$(pwd)/Library/Application Support/Code/User/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 fi
+
+# Create dirs for local libs
+mkdir -p "$HOME/.local/lib/gitstatus"
 
 # Create Git credential helper config
 if [ "$ID" = "Darwin" ]; then
@@ -43,11 +48,8 @@ for dir in ~/Git/*; do
 EOF
 done
 
-# Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Install Powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.oh-my-zsh/custom/themes/powerlevel10k"
 
 # Install vim-plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
