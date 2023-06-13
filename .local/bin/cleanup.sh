@@ -11,6 +11,7 @@ rm -rf ~/.oh-my-zsh/cache/*
 rm -f ~/.viminfo
 rm -f ~/.*_history
 if [ "$UNAME" = "Darwin" ]; then
+	rm -rf ~/Library/Application\ Support/Arc/User\ Data/*/Service\ Worker
 	rm -rf ~/Library/Application\ Support/Code/*Cache*
 	rm -rf ~/Library/Application\ Support/Code/logs
 	rm -rf ~/Library/Application\ Support/Code/Service\ Worker

@@ -14,7 +14,7 @@ Step 2: Clone repo
 git clone https://github.com/chrisx8/dotfiles.git
 ```
 
-Step 3: Run `./setup.sh
+Step 3: Run `./setup.sh`
 
 ## Software used
 

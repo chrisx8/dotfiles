@@ -14,9 +14,7 @@ mkdir -p "$HOME/.config/nvim"
 ln -sfv "$(pwd)/.config/nvim/init.vim" "$HOME/.config/nvim/init.vim"
 
 # Link OS-dependent dotfiles
-if [ "$ID" = "arch" ] || [ "$ID" = "archarm" ]; then
-	ln -sfv "$(pwd)/.config/chromium-flags.conf" "$HOME/.config/chromium-flags.conf"
-elif [ "$ID" = "Darwin" ]; then
+if [ "$ID" = "Darwin" ]; then
 	ln -sfv "$(pwd)/Library/Application Support/Code/User/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 fi
 
@@ -48,9 +46,9 @@ for dir in ~/Git/*; do
 EOF
 done
 
-# Install Powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.oh-my-zsh/custom/themes/powerlevel10k"
-
 # Install vim-plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# Install Powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.oh-my-zsh/custom/themes/powerlevel10k"
