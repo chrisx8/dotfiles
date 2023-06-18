@@ -18,9 +18,6 @@ if [ "$ID" = "Darwin" ]; then
 	ln -sfv "$(pwd)/Library/Application Support/Code/User/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 fi
 
-# Create dirs for local libs
-mkdir -p "$HOME/.local/lib/gitstatus"
-
 # Create Git credential helper config
 if [ "$ID" = "Darwin" ]; then
 	cat > ~/.gitconfig_local <<EOF

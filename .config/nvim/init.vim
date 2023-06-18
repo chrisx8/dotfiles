@@ -38,9 +38,6 @@ set omnifunc=ale#completion#OmniFunc
 set wildmode=longest,list
 
 " keyboard shortcuts
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-S-f> :NERDTreeFind<CR>
-nnoremap <C-S-t> :NERDTreeFocus<CR>
 nnoremap <C-n> :tabnew<CR>
 nnoremap <C-w> :tabclose<CR>
 nnoremap <C-S-n> :tabNext<CR>
@@ -54,7 +51,6 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 	Plug 'dense-analysis/ale'
 	Plug 'itchyny/lightline.vim'
 	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-	Plug 'preservim/nerdtree'
 	Plug 'ryanoasis/vim-devicons'
 	Plug 'vim-scripts/SearchComplete'
 	Plug 'tpope/vim-fugitive'
