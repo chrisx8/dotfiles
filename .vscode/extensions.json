@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "DavidAnson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "ms-python.isort",
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-vscode.cpptools",
+    "njpwerner.autodocstring",
+    "redhat.ansible",
+    "redhat.vscode-yaml",
+    "rust-lang.rust-analyzer",
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "yzhang.markdown-all-in-one"
+  ]
+}

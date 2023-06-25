@@ -2,9 +2,8 @@
 set -e
 
 # Detect OS
-eval "$(grep ^ID= /etc/os-release 2> /dev/null)"
-[ -n "$ID" ] || ID="$(uname -s)"
-echo "Detected OS: $ID"
+[ -n "$OS" ] || OS="$(uname -s)"
+echo "Detected OS: $OS"
 
 # Link dotfiles
 find "$(pwd)" -type f -name '.*' -exec ln -sfv "{}" "$HOME" ";"
@@ -14,12 +13,16 @@ mkdir -p "$HOME/.config/nvim"
 ln -sfv "$(pwd)/.config/nvim/init.vim" "$HOME/.config/nvim/init.vim"
 
 # Link OS-dependent dotfiles
-if [ "$ID" = "Darwin" ]; then
-	ln -sfv "$(pwd)/Library/Application Support/Code/User/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+if [ "$OS" = "Darwin" ]; then
+	mkdir -p "$HOME/Library/Application Support/Code/User"
+	ln -sfv "$(pwd)/.vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+elif [ "$OS" = "Linux" ]; then
+	mkdir -p "$HOME/.config/Code/User"
+	ln -sfv "$(pwd)/.vscode/settings.json" "$HOME/.config/Code/User/settings.json"
 fi
 
 # Create Git credential helper config
-if [ "$ID" = "Darwin" ]; then
+if [ "$OS" = "Darwin" ]; then
 	cat > ~/.gitconfig_local <<EOF
 [credential]
 	helper = osxkeychain

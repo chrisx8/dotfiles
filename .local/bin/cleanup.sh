@@ -1,7 +1,7 @@
 #!/bin/bash
 
-UNAME="$(uname -s)"
-echo "Detected OS: $UNAME"
+OS="$(uname -s)"
+echo "Detected OS: $OS"
 
 echo -e '##### Cleaning cache... #####'
 rm -rf ~/.lldb
@@ -10,8 +10,10 @@ rm -f ~/.lesshst
 rm -rf ~/.oh-my-zsh/cache/*
 rm -f ~/.viminfo
 rm -f ~/.*_history
-if [ "$UNAME" = "Darwin" ]; then
+if [ "$OS" = "Darwin" ]; then
 	rm -rf ~/Library/Application\ Support/Arc/User\ Data/*/Service\ Worker
+	rm -rf ~/Library/Application\ Support/BraveSoftware/Brave-Browser/*/Service\ Worker
+	rm -rf ~/Library/Application\ Support/BraveSoftware/Brave-Browser/Guest\ Profile
 	rm -rf ~/Library/Application\ Support/Code/*Cache*
 	rm -rf ~/Library/Application\ Support/Code/logs
 	rm -rf ~/Library/Application\ Support/Code/Service\ Worker
@@ -38,7 +40,7 @@ if [ "$UNAME" = "Darwin" ]; then
 	rm -rf ~/Library/Caches/typescript
 	rm -rf ~/Library/Caches/us.zoom.xos
 	rm -rf ~/Library/Caches/vscode-cpptools
-elif [ "$UNAME" = "Linux" ]; then
+elif [ "$OS" = "Linux" ]; then
 	rm -rf ~/.config/.cache
 	rm -rf ~/.config/chromium/*/Service\ Worker
 	rm -rf ~/.config/chromium/Guest\ Profile
@@ -69,7 +71,7 @@ elif type pacman &> /dev/null; then
 	yes | yay -Scc
 fi
 
-if [ "$UNAME" = "Linux" ]; then
+if [ "$OS" = "Linux" ]; then
 	echo -e '\n##### Trimming disk... #####'
 	sudo fstrim -av
 fi
