@@ -5,6 +5,12 @@ set -e
 [ -n "$OS" ] || OS="$(uname -s)"
 echo "Detected OS: $OS"
 
+# Install AstroNvim
+git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+
+# Install Powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.oh-my-zsh/custom/themes/powerlevel10k"
+
 # Link dotfiles
 find "$(pwd)" -type f -name '.*' -exec ln -sfv "{}" "$HOME" ";"
 mkdir -p "$HOME/.local/bin"
@@ -45,10 +51,3 @@ for dir in ~/Git/*; do
     path = $dir/.gitconfig
 EOF
 done
-
-# Install vim-plug
-curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# Install Powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.oh-my-zsh/custom/themes/powerlevel10k"

@@ -18,6 +18,7 @@ Step 3: Run `./setup.sh`
 
 ## Software used
 
+- [AstroNvim](https://astronvim.com/)
 - [Git](https://git-scm.com)
 - [GitHub CLI](https://github.com/cli/cli)
 - [Homebrew](https://brew.sh/)
