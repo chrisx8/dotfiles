@@ -2,14 +2,14 @@
 set -e
 
 if [ "$(uname -s)" != "Linux" ]; then
-	echo "This should only be run on Linux!"
-	exit 1
+    echo "This should only be run on Linux!"
+    exit 1
 fi
 
 if [[ "$*" = "--config" ]]; then
-	echo "Please disconnect from VPNs before continuing."
-	read -r -p "Press Enter to continue..."
-	echo
+    echo "Please disconnect from VPNs before continuing."
+    read -r -p "Press Enter to continue..."
+    echo
 fi
 sudo -v
 

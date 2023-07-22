@@ -1,14 +1,14 @@
-#!/bin/zsh
+#!/bin/bash
 set -e
 
 if [ "$(uname -s)" != "Darwin" ]; then
-	echo "This should only be run on MacOS!"
-	exit 1
+    echo "This should only be run on MacOS!"
+    exit 1
 fi
 
 if [ -z "$1" ]; then
-	echo "Usage: mkicns.sh input.png"
-	exit 1
+    echo "Usage: mkicns.sh input.png"
+    exit 1
 fi
 
 mkdir "$1.iconset"

@@ -2,19 +2,19 @@
 
 echo "==> Updating system packages..."
 if type brew &> /dev/null; then
-	brew update
-	brew upgrade
+    brew update
+    brew upgrade
 elif type dnf &> /dev/null; then
-	sudo dnf upgrade
+    sudo dnf upgrade
 elif type pacman &> /dev/null; then
-	yay -Syu
+    yay -Syu
 fi
 echo
 echo "==> Updating user applications..."
 if type rustup &> /dev/null; then
-	echo "### rustup"
-	rustup upgrade
-	echo
+    echo "### rustup"
+    rustup upgrade
+    echo
 fi
 echo "### powerlevel10k"
 git -C "$ZSH/custom/themes/powerlevel10k" pull

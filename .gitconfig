@@ -1,15 +1,15 @@
 [core]
-	autocrlf = input
-	symlinks = true
-	excludesFile = ~/.gitignore
+    autocrlf = input
+    symlinks = true
+    excludesFile = ~/.gitignore
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [pull]
-	rebase = true
+    rebase = true
 [include]
-	path = ~/.gitconfig_local
+    path = ~/.gitconfig_local
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true

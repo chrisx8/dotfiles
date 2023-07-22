@@ -4,7 +4,7 @@ git_web_url="$(git remote get-url origin | sed -r "s/ssh:\/\/.+@/https:\/\//g" |
 
 echo "Opening $git_web_url"
 if [ "$(uname -s)" = "Darwin" ]; then
-	open "$git_web_url"
+    open "$git_web_url"
 else
-	xdg-open "$git_web_url"
+    xdg-open "$git_web_url"
 fi

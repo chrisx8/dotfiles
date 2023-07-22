@@ -10,27 +10,27 @@ alias yayyy='~/.local/bin/pkgupgrade.sh'
 
 # OS-dependent package manager aliases
 if type brew &> /dev/null; then
-	alias yayy='brew install'
-	alias yeet='brew uninstall'
+    alias yayy='brew install'
+    alias yeet='brew uninstall'
 elif type dnf &> /dev/null; then
-	alias yayy='sudo dnf install'
-	alias yeet='sudo dnf remove'
+    alias yayy='sudo dnf install'
+    alias yeet='sudo dnf remove'
 elif type pacman &> /dev/null; then
-	alias yayy='yay -S'
-	alias yeet='sudo pacman -Rsc'
+    alias yayy='yay -S'
+    alias yeet='sudo pacman -Rsc'
 fi
 
 # MacOS aliases
 if [ "$(uname -s)" = "Darwin" ]; then
-	alias limastart='limactl start fedora && lima'
-	alias limastop='limactl stop fedora'
-	alias sha256sum='shasum -a 256'
-	alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
+    alias limastart='limactl start fedora && lima'
+    alias limastop='limactl stop fedora'
+    alias sha256sum='shasum -a 256'
+    alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 fi
 
 # Only in non-TTY shells
 if [ "$XDG_SESSION_TYPE" != "tty" ]; then
-	alias gitrw="~/.local/bin/git-repo-web.sh"
-	alias ghpw='gh pr view -w'
-	alias ghrw='gh repo view -w'
+    alias gitrw="~/.local/bin/git-repo-web.sh"
+    alias ghpw='gh pr view -w'
+    alias ghrw='gh repo view -w'
 fi
