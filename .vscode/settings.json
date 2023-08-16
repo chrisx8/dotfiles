@@ -16,12 +16,12 @@
   "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
   "terminal.integrated.fontSize": 13,
   "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#363636"
+    "editorRuler.foreground": "#323232"
   },
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "ansible.lightspeed.enabled": false,
-  "ansible.lightspeed.URL": "",
+  "ansible.lightspeed.suggestions.enabled": false,
   "ansible.python.interpreterPath": "python3",
   "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4, NamespaceIndentation: All, FixNamespaceComments: false }",
   "C_Cpp.default.cppStandard": "c++17",
@@ -51,7 +51,8 @@
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
-    }
+    },
+    "editor.defaultFormatter": "ms-python.black-formatter"
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"

@@ -8,6 +8,21 @@ alias vi=nvim
 alias vim=nvim
 alias yayyy='~/.local/bin/pkgupgrade.sh'
 
+function gitclean {
+    git remote prune origin
+    git branch --merged | egrep -v "(^\*|master|main)" | xargs git branch -d
+}
+
+function gitrw {
+    git_web_url="$(git remote get-url origin | sed -r "s/ssh:\/\/.+@/https:\/\//g" | sed -r "s/:[0-9]+//g")"
+    echo "Opening $git_web_url"
+    if [ "$(uname -s)" = "Darwin" ]; then
+        open "$git_web_url"
+    else
+        xdg-open "$git_web_url"
+    fi
+}
+
 # OS-dependent package manager aliases
 if type brew &> /dev/null; then
     alias yayy='brew install'
@@ -30,7 +45,6 @@ fi
 
 # Only in non-TTY shells
 if [ "$XDG_SESSION_TYPE" != "tty" ]; then
-    alias gitrw="~/.local/bin/git-repo-web.sh"
     alias ghpw='gh pr view -w'
     alias ghrw='gh repo view -w'
 fi
