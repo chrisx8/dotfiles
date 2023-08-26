@@ -23,6 +23,18 @@ function gitrw {
     fi
 }
 
+function venv {
+    if [ ! -d .venv ]; then
+        echo "Using $(python3 -V)"
+        read -p "choice?Can't find .venv in the current working directory. Create a venv? (y/n) "
+        echo
+        [[ "$choice" == "y" ]] || return 0
+        python3 -m venv .venv
+    fi
+    echo "Activating venv"
+    source .venv/bin/activate
+}
+
 # OS-dependent package manager aliases
 if type brew &> /dev/null; then
     alias yayy='brew install'

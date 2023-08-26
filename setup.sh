@@ -15,7 +15,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.oh-my-z
 find "$(pwd)" -type f -name '.*' -exec ln -sfv "{}" "$HOME" ";"
 mkdir -p "$HOME/.local/bin"
 find "$(pwd)/.local/bin" -type f -exec ln -sfv "{}" "$HOME/.local/bin" ";"
-mkdir -p "$HOME/.config/nvim/lua/user"
+mkdir -p "$HOME/.config/nvim/lua"
 ln -sfv "$(pwd)/.config/nvim/lua/user" "$HOME/.config/nvim/lua/user"
 
 # Link OS-dependent dotfiles
