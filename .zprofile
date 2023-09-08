@@ -9,6 +9,9 @@ fi
 # Cargo
 [[ ! -f "$HOME/.cargo/env" ]] || . "$HOME/.cargo/env"
 
+# Docker Desktop
+[[ ! -d "$HOME/.docker/bin" ]] || export PATH="$HOME/.docker/bin:$PATH"
+
 # GPG terminal
 export GPG_TTY="$TTY"
 

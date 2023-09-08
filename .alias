@@ -23,6 +23,16 @@ function gitrw {
     fi
 }
 
+function quack {
+    DUCK_TOKEN=$(op item get "DuckDuckGo Email" --fields Token)
+    curl --silent \
+        -X POST \
+        -H "Authorization: Bearer $DUCK_TOKEN" \
+        https://quack.duckduckgo.com/api/email/addresses \
+        | jq --raw-output .address \
+        | awk '{print $1"@duck.com"}'
+}
+
 function venv {
     if [ ! -d .venv ]; then
         echo "Using $(python3 -V)"

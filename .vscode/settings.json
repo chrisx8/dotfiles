@@ -9,6 +9,7 @@
   "files.autoSave": "onFocusChange",
   "git.autofetch": true,
   "git.confirmSync": false,
+  "git.openRepositoryInParentFolders": "always",
   "git.showPushSuccessNotification": true,
   "telemetry.telemetryLevel": "off",
   "terminal.external.osxExec": "iTerm.app",
