@@ -36,9 +36,9 @@ function quack {
 function venv {
     if [ ! -d .venv ]; then
         echo "Using $(python3 -V)"
-        read -p "choice?Can't find .venv in the current working directory. Create a venv? (y/n) "
+        read -q "choice?Can't find .venv in the current working directory. Create a venv? (y/n) "
         echo
-        [[ "$choice" == "y" ]] || return 0
+        [[ "$choice" == "y" ]] || return 1
         python3 -m venv .venv
     fi
     echo "Activating venv"
