@@ -6,7 +6,7 @@ alias gitpuf="git push --force-with-lease"
 alias qr='qrencode -t utf8'
 alias vi=nvim
 alias vim=nvim
-alias yayyy='~/.local/bin/pkgupgrade.sh'
+alias yayyy=~/.local/bin/pkgupgrade.sh
 
 function gitclean {
     git remote prune origin
@@ -59,8 +59,8 @@ fi
 
 # MacOS aliases
 if [ "$(uname -s)" = "Darwin" ]; then
-    alias limastart='limactl start fedora && lima'
-    alias limastop='limactl stop fedora'
+    alias limastart='limactl start "$LIMA_INSTANCE" && lima'
+    alias limastop='limactl stop "$LIMA_INSTANCE"'
     alias sha256sum='shasum -a 256'
     alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 fi
