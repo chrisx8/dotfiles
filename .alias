@@ -41,8 +41,12 @@ function venv {
         [[ "$choice" == "y" ]] || return 1
         python3 -m venv .venv
     fi
-    echo "Activating venv"
-    source .venv/bin/activate
+    if [ -f Pipfile ]; then
+        pipenv shell
+    else
+        echo "Activating venv"
+        source .venv/bin/activate
+    fi
 }
 
 # OS-dependent package manager aliases
