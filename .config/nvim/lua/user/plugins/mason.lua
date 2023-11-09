@@ -16,7 +16,10 @@ return {
       ensure_installed = {
         "black",
         "isort",
+        "markdownlint",
+        "prettier",
         "shellcheck",
+        "yamllint",
       }
     }
   }
