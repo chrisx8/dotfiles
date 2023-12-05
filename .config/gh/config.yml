@@ -1,0 +1,11 @@
+---
+aliases:
+  co: pr checkout
+  pw: pr view -w
+  rw: repo view -w
+browser: ""
+editor:
+git_protocol: https
+http_unix_socket:
+pager: less -FX
+prompt: enabled

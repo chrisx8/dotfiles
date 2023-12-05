@@ -68,9 +68,3 @@ if [ "$(uname -s)" = "Darwin" ]; then
     alias sha256sum='shasum -a 256'
     alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 fi
-
-# Only in non-TTY shells
-if [ "$XDG_SESSION_TYPE" != "tty" ]; then
-    alias ghpw='gh pr view -w'
-    alias ghrw='gh repo view -w'
-fi
