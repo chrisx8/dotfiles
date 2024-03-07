@@ -5,25 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-export PATH="$HOME/.local/bin:$PATH"
-
-# Preferred editor
-export EDITOR=nvim
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Load aliases
-[[ ! -f ~/.alias ]] || source ~/.alias
-
-# Powerlevel10k prompt. To customize, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k-ascii.zsh ]] || source ~/.p10k-ascii.zsh
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -69,9 +56,43 @@ plugins=(docker golang rust)
 
 source $ZSH/oh-my-zsh.sh
 
-# Load Homebrew completions
-if type brew &>/dev/null; then
+# Powerlevel10k prompt. To customize, run `p10k configure` or edit ~/.p10k.zsh.
+# [[ ! -f ~/.p10k-ascii.zsh ]] || source ~/.p10k-ascii.zsh
+source ~/.p10k.zsh
+
+# shell aliases
+source ~/.alias
+
+# Homebrew
+if [ -f /opt/homebrew/bin/brew ]; then
+    # Set Homebrew env
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+    export HOMEBREW_NO_ANALYTICS=1
+    export HOMEBREW_NO_ENV_HINTS=1
+    export PATH="/opt/homebrew/opt/make/libexec/gnubin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+    # Load Homebrew completions
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+fi
+
+# Cargo
+[[ ! -f "$HOME/.cargo/env" ]] || source "$HOME/.cargo/env"
+
+# Docker Desktop
+[[ ! -d "$HOME/.docker/bin" ]] || export PATH="$HOME/.docker/bin:$PATH"
+
+# Golang
+if type go &> /dev/null; then
+    export GOPROXY=direct
+fi
+
+# Lima
+if type lima &> /dev/null; then
+    export LIMA_INSTANCE=fedora
+fi
+
+# Pipenv
+if type pipenv &> /dev/null; then
+    export PIPENV_VENV_IN_PROJECT=1
 fi
 
 # :)
@@ -82,3 +103,12 @@ fi
 # Command completion
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
+
+# Preferred editor
+export EDITOR=nvim
+
+# GPG terminal
+export GPG_TTY="$TTY"
+
+# Local bin directory
+export PATH="$HOME/.local/bin:$PATH"

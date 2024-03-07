@@ -25,6 +25,7 @@ if [ "$OS" = "Darwin" ]; then
     rm -rf ~/Library/Application\ Support/VSCodium/*Cache*
     rm -rf ~/Library/Application\ Support/VSCodium/logs
     rm -rf ~/Library/Application\ Support/VSCodium/Service\ Worker
+    rm -rf ~/Library/Caches/BraveSoftware
     rm -rf ~/Library/Caches/Firefox
     rm -rf ~/Library/Caches/Google
     rm -rf ~/Library/Caches/lima
