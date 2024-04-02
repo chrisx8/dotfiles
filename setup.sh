@@ -5,20 +5,19 @@ set -e
 [ -n "$OS" ] || OS="$(uname -s)"
 echo "Detected OS: $OS"
 
-# Install AstroNvim
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+# Clean repo
+rm -fv .DS_Store
 
 # Install Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$HOME/.oh-my-zsh/custom/themes/powerlevel10k"
 
 # Link dotfiles
-find "$(pwd)" -type f -name '.*' -exec ln -sfv "{}" "$HOME" ";"
+find "$(pwd)" -maxdepth 1 -type f -name '.*' -exec ln -sfv "{}" "$HOME" ";"
 mkdir -p "$HOME/.local/bin"
 find "$(pwd)/.local/bin" -type f -exec ln -sfv "{}" "$HOME/.local/bin" ";"
 mkdir -p "$HOME/.config/gh"
 ln -sfv "$(pwd)/.config/gh/config.yml" "$HOME/.config/gh/config.yml"
-mkdir -p "$HOME/.config/nvim/lua"
-ln -sfv "$(pwd)/.config/nvim/lua/user" "$HOME/.config/nvim/lua/user"
+ln -sfv "$(pwd)/.config/nvim" "$HOME/.config"
 
 # Link OS-dependent dotfiles
 if [ "$OS" = "Darwin" ]; then

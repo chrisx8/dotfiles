@@ -60,9 +60,6 @@ source $ZSH/oh-my-zsh.sh
 # [[ ! -f ~/.p10k-ascii.zsh ]] || source ~/.p10k-ascii.zsh
 source ~/.p10k.zsh
 
-# shell aliases
-source ~/.alias
-
 # Homebrew
 if [ -f /opt/homebrew/bin/brew ]; then
     # Set Homebrew env
@@ -103,6 +100,9 @@ fi
 # Command completion
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
+
+# shell aliases
+source ~/.alias
 
 # Preferred editor
 export EDITOR=nvim

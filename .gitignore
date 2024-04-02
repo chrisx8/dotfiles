@@ -14,3 +14,6 @@
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
+
+# Neovim
+*/nvim/lazy-lock.json

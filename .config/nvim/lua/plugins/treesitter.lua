@@ -1,3 +1,6 @@
+-- Customize Treesitter
+
+---@type LazySpec
 return {
   "nvim-treesitter/nvim-treesitter",
   opts = function(_, opts)
