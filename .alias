@@ -39,11 +39,15 @@ function venv {
         read -q "choice?Can't find .venv in the current working directory. Create a venv? (y/n) "
         echo
         [[ "$choice" == "y" ]] || return 1
-        python3 -m venv .venv
+        uv venv --seed .venv
     fi
     echo "Activating venv"
     source .venv/bin/activate
 }
+
+if type kubecolor &> /dev/null; then
+    alias kubectl=kubecolor
+fi
 
 # OS-dependent package manager aliases
 if type brew &> /dev/null; then

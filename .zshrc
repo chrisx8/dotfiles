@@ -66,7 +66,6 @@ if [ -f /opt/homebrew/bin/brew ]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
     export HOMEBREW_NO_ANALYTICS=1
     export HOMEBREW_NO_ENV_HINTS=1
-    export PATH="/opt/homebrew/opt/make/libexec/gnubin:/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
     # Load Homebrew completions
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
