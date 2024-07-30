@@ -1,8 +1,8 @@
 #!/bin/bash
-set -e
+set -eux
 
 if [ "$(uname -s)" != "Linux" ]; then
-    echo "This should only be run on Linux!"
+    echo "This should only be used on Linux!"
     exit 1
 fi
 
@@ -24,5 +24,3 @@ sudo sysctl -w net.ipv6.conf.all.disable_ipv6=0 > /dev/null
 
 echo "Restarting NetworkManager..."
 sudo systemctl restart NetworkManager.service
-
-echo "OK"

@@ -7,6 +7,8 @@
     defaultBranch = main
 [pull]
     rebase = true
+[rebase]
+    autoStash = true
 [include]
     path = ~/.gitconfig_local
 [filter "lfs"]

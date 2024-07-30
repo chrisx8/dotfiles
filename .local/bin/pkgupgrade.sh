@@ -5,12 +5,17 @@ if type brew &> /dev/null; then
     brew update
     brew upgrade
 elif type dnf &> /dev/null; then
-    sudo dnf upgrade
+    sudo dnf upgrade --refresh
 elif type pacman &> /dev/null; then
     yay -Syu
 fi
 echo
 echo "==> Updating user applications..."
+if type flatpak &> /dev/null; then
+    echo "### flatpak"
+    flatpak update
+    echo
+fi
 if type rustup &> /dev/null; then
     echo "### rustup"
     rustup upgrade

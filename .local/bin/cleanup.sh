@@ -71,8 +71,3 @@ elif type pacman &> /dev/null; then
     pacman -Qdtq | sudo pacman -Rs -
     yes | yay -Scc
 fi
-
-if [ "$OS" = "Linux" ]; then
-    echo -e '\n##### Trimming disk... #####'
-    sudo fstrim -av
-fi
