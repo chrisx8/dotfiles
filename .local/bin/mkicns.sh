@@ -2,7 +2,7 @@
 set -e
 
 if [ "$(uname -s)" != "Darwin" ]; then
-    echo "This should only be run on MacOS!"
+    echo "This should only be used on MacOS!"
     exit 1
 fi
 
