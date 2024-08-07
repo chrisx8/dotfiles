@@ -11,6 +11,11 @@ elif type pacman &> /dev/null; then
 fi
 echo
 echo "==> Updating user applications..."
+if type flatpak &> /dev/null; then
+    echo "### flatpak"
+    flatpak update
+    echo
+fi
 if type rustup &> /dev/null; then
     echo "### rustup"
     rustup upgrade
