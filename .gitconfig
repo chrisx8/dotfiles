@@ -1,8 +1,8 @@
 [core]
     autocrlf = input
-    symlinks = true
     excludesFile = ~/.gitignore
-    pager = less -FX
+    pager = bat
+    symlinks = true
 [init]
     defaultBranch = main
 [pull]

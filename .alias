@@ -23,6 +23,10 @@ function gitrw {
     fi
 }
 
+function help() {
+    "$@" --help 2>&1 | bat --plain --language=help
+}
+
 function quack {
     DUCK_TOKEN=$(op item get "DuckDuckGo Email" --fields Token)
     curl --silent \
