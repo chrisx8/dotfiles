@@ -52,7 +52,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(docker golang rust)
+plugins=(golang rust)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -72,9 +72,6 @@ fi
 
 # Cargo
 [[ ! -f "$HOME/.cargo/env" ]] || source "$HOME/.cargo/env"
-
-# Docker Desktop
-[[ ! -d "$HOME/.docker/bin" ]] || export PATH="$HOME/.docker/bin:$PATH"
 
 # Golang
 if type go &> /dev/null; then
