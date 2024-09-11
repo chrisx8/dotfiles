@@ -97,9 +97,6 @@ fi
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
 
-# shell aliases
-source ~/.alias
-
 # Preferred editor
 export EDITOR=nvim
 
@@ -108,3 +105,6 @@ export GPG_TTY="$TTY"
 
 # Local bin directory
 export PATH="$HOME/.local/bin:$PATH"
+
+# shell aliases
+source ~/.alias

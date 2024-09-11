@@ -28,7 +28,7 @@ function help() {
 }
 
 function quack {
-    DUCK_TOKEN=$(op item get "DuckDuckGo Email" --fields Token)
+    local DUCK_TOKEN=$(op item get "DuckDuckGo Email" --fields Token --reveal)
     curl --silent \
         -X POST \
         -H "Authorization: Bearer $DUCK_TOKEN" \
@@ -50,7 +50,9 @@ function venv {
 }
 
 if type kubecolor &> /dev/null; then
-    alias kubectl=kubecolor
+    alias k=kubecolor
+elif type kubectl &> /dev/null; then
+    alias k=kubectl
 fi
 
 # OS-dependent package manager aliases

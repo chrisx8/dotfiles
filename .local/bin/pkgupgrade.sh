@@ -21,6 +21,11 @@ if type rustup &> /dev/null; then
     rustup upgrade
     echo
 fi
+if uv self -V &> /dev/null; then
+    echo "### uv"
+    uv self update
+    echo
+fi
 echo "### powerlevel10k"
 git -C "$ZSH/custom/themes/powerlevel10k" pull
 echo
