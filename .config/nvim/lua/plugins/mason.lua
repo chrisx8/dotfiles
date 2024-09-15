@@ -29,6 +29,7 @@ return {
         "markdownlint",
         "prettier",
         "shellcheck",
+        "shfmt",
         "stylua",
         "yamllint",
       })

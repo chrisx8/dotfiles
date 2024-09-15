@@ -61,13 +61,13 @@ elif [ "$OS" = "Linux" ]; then
 fi
 
 echo -e '\n##### Cleaning packages... #####'
-if type brew &> /dev/null; then
+if type brew &>/dev/null; then
     brew autoremove
     brew cleanup --prune=all
-elif type dnf &> /dev/null; then
+elif type dnf &>/dev/null; then
     sudo dnf autoremove
     sudo dnf clean packages
-elif type pacman &> /dev/null; then
+elif type pacman &>/dev/null; then
     pacman -Qdtq | sudo pacman -Rs -
     yes | yay -Scc
 fi

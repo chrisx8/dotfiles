@@ -30,12 +30,12 @@ fi
 
 # Create Git credential helper config
 if [ "$OS" = "Darwin" ]; then
-    cat > ~/.gitconfig_local <<EOF
+    cat >~/.gitconfig_local <<EOF
 [credential]
     helper = osxkeychain
 EOF
 else
-    cat > ~/.gitconfig_local <<EOF
+    cat >~/.gitconfig_local <<EOF
 [credential "https://github.com"]
     helper =
     helper = !/usr/bin/gh auth git-credential
@@ -47,7 +47,7 @@ fi
 
 # Create Git remote-specific config
 for dir in ~/Git/*; do
-    cat >> ~/.gitconfig_local <<EOF
+    cat >>~/.gitconfig_local <<EOF
 [includeIf "gitdir:$dir/"]
     path = $dir/.gitconfig
 EOF
