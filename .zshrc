@@ -52,7 +52,13 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(golang rust)
+plugins=(
+    colored-man-pages
+    fzf
+    golang
+    rust
+    zsh-interactive-cd
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -68,6 +74,8 @@ if [ -f /opt/homebrew/bin/brew ]; then
     export HOMEBREW_NO_ENV_HINTS=1
     # Load Homebrew completions
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+    # Update path
+    export PATH="/opt/homebrew/opt/node@22/bin:$PATH"
 fi
 
 # Cargo
