@@ -3,6 +3,7 @@
     "christian-kohler.path-intellisense",
     "DavidAnson.vscode-markdownlint",
     "esbenp.prettier-vscode",
+    "foxundermoon.shell-format",
     "ms-python.black-formatter",
     "ms-python.isort",
     "ms-python.python",
@@ -14,6 +15,8 @@
     "rust-lang.rust-analyzer",
     "streetsidesoftware.code-spell-checker",
     "usernamehw.errorlens",
+    "vscodevim.vim",
+    "wholroyd.jinja",
     "yzhang.markdown-all-in-one"
   ]
 }

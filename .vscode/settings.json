@@ -1,8 +1,10 @@
 {
+  "accessibility.signals.terminalBell": {
+    "sound": "on"
+  },
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.fontSize": 13,
-  "editor.formatOnSave": true,
   "editor.rulers": [80, 120],
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
@@ -13,7 +15,7 @@
   "git.showPushSuccessNotification": true,
   "telemetry.telemetryLevel": "off",
   "terminal.external.osxExec": "iTerm.app",
-  "terminal.integrated.enableBell": true,
+  "terminal.integrated.enableVisualBell": true,
   "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
   "terminal.integrated.fontSize": 13,
   "workbench.colorCustomizations": {
@@ -30,6 +32,7 @@
   "cSpell.allowCompoundWords": true,
   "gitlens.plusFeatures.enabled": false,
   "gitlens.telemetry.enabled": false,
+  "isort.args": ["--profile=black", "-l=88"],
   "markdown.extension.print.absoluteImgPath": false,
   "markdown.preview.linkify": false,
   "python.analysis.typeCheckingMode": "basic",
@@ -37,6 +40,9 @@
   "vim.changeWordIncludesWhitespace": true,
   "vim.enableNeovim": true,
   "vim.useSystemClipboard": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -51,9 +57,8 @@
   },
   "[python]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    },
-    "editor.defaultFormatter": "ms-python.black-formatter"
+      "source.organizeImports": "explicit"
+    }
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
