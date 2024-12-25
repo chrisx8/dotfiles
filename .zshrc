@@ -57,6 +57,7 @@ plugins=(
     fzf
     golang
     rust
+    tailscale
     zsh-interactive-cd
 )
 
