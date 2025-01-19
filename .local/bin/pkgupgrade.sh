@@ -25,6 +25,9 @@ if uv self -V &> /dev/null; then
     echo "### uv"
     uv self update
     echo
+    echo "### uv tool"
+    uv tool upgrade --all
+    echo
 fi
 echo "### powerlevel10k"
 git -C "$ZSH/custom/themes/powerlevel10k" pull
