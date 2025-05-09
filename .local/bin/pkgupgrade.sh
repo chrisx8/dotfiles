@@ -21,7 +21,7 @@ if type rustup &> /dev/null; then
     rustup upgrade
     echo
 fi
-if uv self -V &> /dev/null; then
+if uv self version &> /dev/null; then
     echo "### uv"
     uv self update
     echo
