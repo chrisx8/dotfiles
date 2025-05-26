@@ -1,7 +1,6 @@
 alias bwcheck='bw unlock --check'
 alias bwlock='bw lock'
 alias bwunlock='export BW_SESSION="$(bw unlock --raw)"'
-alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
 alias gitpuf="git push --force-with-lease"
 alias qr='qrencode -t utf8'
 alias vi=nvim
@@ -11,6 +10,14 @@ alias yayyy=~/.local/bin/pkgupgrade.sh
 function gitclean {
     git remote prune origin
     git branch --merged | egrep -v "(^\*|master|main)" | xargs git branch -d
+}
+
+function gitlog {
+    if [ "$1" = "-s" ]; then
+        git log --show-signature
+    else
+        git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'
+    fi
 }
 
 function gitrw {
