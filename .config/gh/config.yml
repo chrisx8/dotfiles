@@ -2,8 +2,6 @@
 version: "1"
 aliases:
   co: pr checkout
-  pw: pr view -w
-  rw: repo view -w
 browser: ""
 editor:
 git_protocol: https
