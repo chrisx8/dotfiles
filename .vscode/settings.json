@@ -13,6 +13,7 @@
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "always",
   "git.showPushSuccessNotification": true,
+  "telemetry.feedback.enabled": false
   "telemetry.telemetryLevel": "off",
   "terminal.external.osxExec": "iTerm.app",
   "terminal.integrated.enableVisualBell": true,
@@ -62,5 +63,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+  },
 }
