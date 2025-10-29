@@ -2,8 +2,6 @@
   "accessibility.signals.terminalBell": {
     "sound": "on"
   },
-  "chat.disableAIFeatures": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.fontSize": 13,
   "editor.rulers": [80, 120],
@@ -34,10 +32,9 @@
   "cSpell.allowCompoundWords": true,
   "gitlens.plusFeatures.enabled": false,
   "gitlens.telemetry.enabled": false,
-  "isort.args": ["--profile=black", "-l=88"],
   "markdown.extension.print.absoluteImgPath": false,
   "markdown.preview.linkify": false,
-  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.typeCheckingMode": "standard",
   "redhat.telemetry.enabled": false,
   "vim.changeWordIncludesWhitespace": true,
   "vim.enableNeovim": true,
@@ -64,5 +61,5 @@
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
+  }
 }

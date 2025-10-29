@@ -5,7 +5,6 @@ alias gitpuf="git push --force-with-lease"
 alias qr='qrencode -t utf8'
 alias vi=nvim
 alias vim=nvim
-alias yayyy=~/.local/bin/pkgupgrade.sh
 
 function gitclean {
     git remote prune origin
@@ -62,22 +61,8 @@ elif type kubectl &> /dev/null; then
     alias k=kubectl
 fi
 
-# OS-dependent package manager aliases
-if type brew &> /dev/null; then
-    alias yayy='brew install'
-    alias yeet='brew uninstall'
-elif type dnf &> /dev/null; then
-    alias yayy='sudo dnf install'
-    alias yeet='sudo dnf remove'
-elif type pacman &> /dev/null; then
-    alias yayy='yay -S'
-    alias yeet='sudo pacman -Rsc'
-fi
-
 # MacOS aliases
 if [ "$(uname -s)" = "Darwin" ]; then
-    alias limastart='limactl start "$LIMA_INSTANCE" && lima'
-    alias limastop='limactl stop "$LIMA_INSTANCE"'
     alias sha256sum='shasum -a 256'
     alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 fi
