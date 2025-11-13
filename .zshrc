@@ -75,8 +75,6 @@ if [ -f /opt/homebrew/bin/brew ]; then
     export HOMEBREW_NO_ENV_HINTS=1
     # Load Homebrew completions
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-    # Update path
-    export PATH="/opt/homebrew/opt/kubernetes-cli@1.31/bin:/opt/homebrew/opt/node@22/bin:$PATH"
 fi
 
 # Cargo

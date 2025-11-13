@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 echo "==> Updating system packages..."
 if type brew &> /dev/null; then
