@@ -1,6 +1,6 @@
 {
   "accessibility.signals.terminalBell": {
-    "sound": "on"
+    "sound": "on",
   },
   "editor.bracketPairColorization.enabled": true,
   "editor.fontSize": 13,
@@ -19,7 +19,7 @@
   "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
   "terminal.integrated.fontSize": 13,
   "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#323232"
+    "editorRuler.foreground": "#323232",
   },
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
@@ -40,26 +40,26 @@
   "vim.enableNeovim": true,
   "vim.useSystemClipboard": true,
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "prettier.prettier-vscode",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "prettier.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "prettier.prettier-vscode",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "prettier.prettier-vscode",
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
   },
   "[python]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
-    }
+      "source.organizeImports": "explicit",
+    },
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  }
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
 }
