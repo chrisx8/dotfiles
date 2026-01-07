@@ -63,6 +63,8 @@ fi
 
 # MacOS aliases
 if [ "$(uname -s)" = "Darwin" ]; then
+    alias limastart='limactl start "$LIMA_INSTANCE" && lima'
+    alias limastop='limactl stop "$LIMA_INSTANCE"'
     alias sha256sum='shasum -a 256'
     alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 fi
