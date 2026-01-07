@@ -58,6 +58,7 @@ plugins=(
     golang
     rust
     tailscale
+    uv
     zsh-interactive-cd
 )
 
