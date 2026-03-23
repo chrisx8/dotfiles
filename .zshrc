@@ -91,16 +91,6 @@ if type lima &> /dev/null; then
     export LIMA_INSTANCE=fedora
 fi
 
-# Pipenv
-if type pipenv &> /dev/null; then
-    export PIPENV_VENV_IN_PROJECT=1
-fi
-
-# :)
-if type thefuck &>/dev/null; then
-    eval $(thefuck --alias)
-fi
-
 # Command completion
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit

@@ -14,7 +14,7 @@
   "git.showPushSuccessNotification": true,
   "telemetry.feedback.enabled": false,
   "telemetry.telemetryLevel": "off",
-  "terminal.external.osxExec": "iTerm.app",
+  "terminal.external.osxExec": "Ghostty.app",
   "terminal.integrated.enableVisualBell": true,
   "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
   "terminal.integrated.fontSize": 13,
@@ -38,6 +38,9 @@
   "vim.changeWordIncludesWhitespace": true,
   "vim.enableNeovim": true,
   "vim.useSystemClipboard": true,
+  "[ansible]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
