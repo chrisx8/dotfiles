@@ -18,6 +18,7 @@ return {
         "shellcheck",
         "shfmt",
         "stylua",
+        "tree-sitter-cli",
         "yamllint",
       },
     },
