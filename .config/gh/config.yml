@@ -8,3 +8,4 @@ git_protocol: https
 http_unix_socket:
 pager: less -FX
 prompt: enabled
+telemetry: disabled
