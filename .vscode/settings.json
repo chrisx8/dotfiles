@@ -1,10 +1,45 @@
 {
-  "accessibility.signals.terminalBell": {
-    "sound": "on",
+  "[ansible]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "accessibility.signals.terminalBell": {
+    "sound": "on"
+  },
+  "ansible.lightspeed.enabled": false,
+  "ansible.lightspeed.suggestions.enabled": false,
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4, NamespaceIndentation: All, FixNamespaceComments: false }",
+  "C_Cpp.default.cStandard": "c99",
+  "C_Cpp.default.cppStandard": "c++17",
+  "cSpell.allowCompoundWords": true,
   "editor.bracketPairColorization.enabled": true,
-  "editor.fontSize": 13,
-  "editor.rulers": [80, 120],
+  "editor.fontFamily": "'MesloLGS Nerd Font Mono', monospace",
+  "editor.rulers": [
+    80,
+    120
+  ],
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "files.autoSave": "onFocusChange",
@@ -12,56 +47,24 @@
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "always",
   "git.showPushSuccessNotification": true,
-  "telemetry.feedback.enabled": false,
-  "telemetry.telemetryLevel": "off",
-  "terminal.external.osxExec": "Ghostty.app",
-  "terminal.integrated.enableVisualBell": true,
-  "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
-  "terminal.integrated.fontSize": 13,
-  "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#323232",
-  },
-  "workbench.enableExperiments": false,
-  "workbench.settings.enableNaturalLanguageSearch": false,
-  "ansible.lightspeed.enabled": false,
-  "ansible.lightspeed.suggestions.enabled": false,
-  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: LLVM, UseTab: Never, IndentWidth: 4, TabWidth: 4, AllowShortIfStatementsOnASingleLine: false, IndentCaseLabels: false, ColumnLimit: 0, AccessModifierOffset: -4, NamespaceIndentation: All, FixNamespaceComments: false }",
-  "C_Cpp.default.cppStandard": "c++17",
-  "C_Cpp.default.cStandard": "c99",
-  "cSpell.allowCompoundWords": true,
   "gitlens.plusFeatures.enabled": false,
   "gitlens.telemetry.enabled": false,
   "markdown.extension.print.absoluteImgPath": false,
   "markdown.preview.linkify": false,
   "python.analysis.typeCheckingMode": "standard",
   "redhat.telemetry.enabled": false,
+  "telemetry.feedback.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "terminal.external.osxExec": "Ghostty.app",
+  "terminal.integrated.enableVisualBell": true,
+  "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
+  "terminal.integrated.fontSize": 13,
   "vim.changeWordIncludesWhitespace": true,
   "vim.enableNeovim": true,
   "vim.useSystemClipboard": true,
-  "[ansible]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
+  "workbench.colorCustomizations": {
+    "editorRuler.foreground": "#323232"
   },
-  "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
-  },
-  "[python]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit",
-    },
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-  },
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false
 }

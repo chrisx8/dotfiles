@@ -25,7 +25,9 @@ if [ "$OS" = "Darwin" ]; then
     ln -sfv "$(pwd)/.vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 elif [ "$OS" = "Linux" ]; then
     mkdir -p "$HOME/.config/Code/User"
+    mkdir -p "$HOME/.config/VSCodium/User"
     ln -sfv "$(pwd)/.vscode/settings.json" "$HOME/.config/Code/User/settings.json"
+    ln -sfv "$(pwd)/.vscode/settings.json" "$HOME/.config/VSCodium/User/settings.json"
 fi
 
 # Create Git credential helper config
