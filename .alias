@@ -1,12 +1,7 @@
-alias bwcheck='bw unlock --check'
-alias bwlock='bw lock'
-alias bwunlock='export BW_SESSION="$(bw unlock --raw)"'
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
 alias gitlogs="git log --show-signature"
 alias gitpuf="git push --force-with-lease"
 alias qr='qrencode -t utf8'
-alias vi=nvim
-alias vim=nvim
 
 function gitclean {
     git remote prune origin
@@ -39,10 +34,21 @@ function venv {
     source .venv/bin/activate
 }
 
+if type bw &> /dev/null; then
+    alias bwcheck='bw unlock --check'
+    alias bwlock='bw lock'
+    alias bwunlock='export BW_SESSION="$(bw unlock --raw)"'
+fi
+
 if type kubecolor &> /dev/null; then
     alias k=kubecolor
 elif type kubectl &> /dev/null; then
     alias k=kubectl
+fi
+
+if type nvim &> /dev/null; then
+    alias vi=nvim
+    alias vim=nvim
 fi
 
 # MacOS aliases
