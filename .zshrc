@@ -65,8 +65,11 @@ plugins=(
 source "$ZSH/oh-my-zsh.sh"
 
 # Powerlevel10k prompt. To customize, run `p10k configure` or edit ~/.p10k.zsh.
-# [[ ! -f ~/.p10k-ascii.zsh ]] || source ~/.p10k-ascii.zsh
-source ~/.p10k.zsh
+if [[ "$TERM" == "xterm-"* ]]; then
+    source ~/.p10k.zsh
+else
+    source ~/.p10k-ascii.zsh
+fi
 
 # Homebrew
 if [ -f /opt/homebrew/bin/brew ]; then
