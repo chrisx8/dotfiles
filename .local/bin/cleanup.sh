@@ -11,19 +11,14 @@ rm -rf ~/.lldb
 rm -rf ~/.npm
 rm -rf ~/.oh-my-zsh/cache/*
 if [ "$OS" = "Darwin" ]; then
-    rm -rf ~/Library/Application\ Support/Arc/User\ Data/*/Service\ Worker
-    rm -rf ~/Library/Application\ Support/BraveSoftware/Brave-Browser/*/Service\ Worker
     rm -rf ~/Library/Application\ Support/BraveSoftware/Brave-Browser/Guest\ Profile
     rm -rf ~/Library/Application\ Support/Code/*Cache*
-    rm -rf ~/Library/Application\ Support/Code/Service\ Worker
     rm -rf ~/Library/Application\ Support/Code/logs
-    rm -rf ~/Library/Application\ Support/Google/Chrome/*/Service\ Worker
     rm -rf ~/Library/Application\ Support/Google/Chrome/Guest\ Profile
     rm -rf ~/Library/Application\ Support/Signal/*Cache*
     rm -rf ~/Library/Application\ Support/Signal/logs
     rm -rf ~/Library/Application\ Support/Signal/temp
     rm -rf ~/Library/Application\ Support/VSCodium/*Cache*
-    rm -rf ~/Library/Application\ Support/VSCodium/Service\ Worker
     rm -rf ~/Library/Application\ Support/VSCodium/logs
     rm -rf ~/Library/Caches/BraveSoftware
     rm -rf ~/Library/Caches/Firefox
@@ -48,9 +43,7 @@ elif [ "$OS" = "Linux" ]; then
     rm -rf ~/.config/Signal/logs
     rm -rf ~/.config/Signal/temp
     rm -rf ~/.config/VSCodium/*Cache*
-    rm -rf ~/.config/VSCodium/Service\ Worker
     rm -rf ~/.config/VSCodium/logs
-    rm -rf ~/.config/chromium/*/Service\ Worker
     rm -rf ~/.config/chromium/Guest\ Profile
     rm -rf ~/.gnome
     rm -rf ~/.local/share/RecentDocuments
