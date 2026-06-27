@@ -24,12 +24,18 @@ ln -sfv "$(pwd)/.config/opencode/opencode.json" "$HOME/.config/opencode/opencode
 # Link OS-dependent dotfiles
 if [ "$OS" = "Darwin" ]; then
     mkdir -p "$HOME/Library/Application Support/Code/User"
+    mkdir -p "$HOME/Library/Application Support/VSCodium/User"
     ln -sfv "$(pwd)/.vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
+    ln -sfv "$(pwd)/.vscode/settings.json" "$HOME/Library/Application Support/VSCodium/User/settings.json"
+    mkdir -p "$HOME/Library/Application Support/com.mitchellh.ghostty"
+    ln -sfv "$(pwd)/.config/ghostty/config.ghostty" "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
 elif [ "$OS" = "Linux" ]; then
     mkdir -p "$HOME/.config/Code/User"
     mkdir -p "$HOME/.config/VSCodium/User"
     ln -sfv "$(pwd)/.vscode/settings.json" "$HOME/.config/Code/User/settings.json"
     ln -sfv "$(pwd)/.vscode/settings.json" "$HOME/.config/VSCodium/User/settings.json"
+    mkdir -p "$HOME/.config/ghostty"
+    ln -sfv "$(pwd)/.config/ghostty/config.ghostty" "$HOME/.config/ghostty/config.ghostty"
 fi
 
 # Create Git credential helper config

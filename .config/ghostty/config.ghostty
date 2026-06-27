@@ -1,0 +1,5 @@
+font-feature = -calt, -liga, -dlig
+shell-integration-features = ssh-env, sudo
+theme = Ultra Dark
+window-height = 48
+window-width = 160
