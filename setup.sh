@@ -18,6 +18,8 @@ find "$(pwd)/.local/bin" -type f -exec ln -sfv "{}" "$HOME/.local/bin" ";"
 mkdir -p "$HOME/.config/gh"
 ln -sfv "$(pwd)/.config/gh/config.yml" "$HOME/.config/gh/config.yml"
 ln -sfv "$(pwd)/.config/nvim" "$HOME/.config"
+mkdir -p "$HOME/.config/opencode"
+ln -sfv "$(pwd)/.config/opencode/opencode.json" "$HOME/.config/opencode/opencode.json"
 
 # Link OS-dependent dotfiles
 if [ "$OS" = "Darwin" ]; then
