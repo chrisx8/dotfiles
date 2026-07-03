@@ -43,6 +43,8 @@ if [ "$OS" = "Darwin" ]; then
     cat >~/.gitconfig_local <<EOF
 [credential]
     helper = osxkeychain
+[gpg "ssh"]
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
 EOF
 else
     cat >~/.gitconfig_local <<EOF
@@ -52,6 +54,8 @@ else
 [credential "https://gist.github.com"]
     helper =
     helper = !/usr/bin/gh auth git-credential
+[gpg "ssh"]
+    program = "/opt/1Password/op-ssh-sign"
 EOF
 fi
 

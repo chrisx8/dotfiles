@@ -3,6 +3,15 @@
     excludesFile = ~/.gitignore
     pager = bat --plain
     symlinks = true
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[gpg]
+    format = ssh
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/git_allowed_signers
 [init]
     defaultBranch = main
 [pull]
@@ -11,8 +20,3 @@
     autoStash = true
 [include]
     path = ~/.gitconfig_local
-[filter "lfs"]
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
-    required = true
