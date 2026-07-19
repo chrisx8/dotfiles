@@ -11,20 +11,13 @@ rm -rf ~/.lldb
 rm -rf ~/.npm
 rm -rf ~/.oh-my-zsh/cache/*
 if [ "$OS" = "Darwin" ]; then
-    rm -rf ~/Library/Application\ Support/BraveSoftware/Brave-Browser/Guest\ Profile
     rm -rf ~/Library/Application\ Support/Code/*Cache*
     rm -rf ~/Library/Application\ Support/Code/logs
-    rm -rf ~/Library/Application\ Support/Google/Chrome/Guest\ Profile
     rm -rf ~/Library/Application\ Support/Signal/*Cache*
     rm -rf ~/Library/Application\ Support/Signal/logs
     rm -rf ~/Library/Application\ Support/Signal/temp
     rm -rf ~/Library/Application\ Support/VSCodium/*Cache*
     rm -rf ~/Library/Application\ Support/VSCodium/logs
-    rm -rf ~/Library/Caches/BraveSoftware
-    rm -rf ~/Library/Caches/Firefox
-    rm -rf ~/Library/Caches/Google
-    rm -rf ~/Library/Caches/Microsoft
-    rm -rf ~/Library/Caches/Mozilla
     rm -rf ~/Library/Caches/com.microsoft.VSCode*
     rm -rf ~/Library/Caches/im.riot.app*
     rm -rf ~/Library/Caches/js-v8flags
@@ -44,13 +37,14 @@ elif [ "$OS" = "Linux" ]; then
     rm -rf ~/.config/Signal/temp
     rm -rf ~/.config/VSCodium/*Cache*
     rm -rf ~/.config/VSCodium/logs
-    rm -rf ~/.config/chromium/Guest\ Profile
     rm -rf ~/.gnome
     rm -rf ~/.local/share/RecentDocuments
     rm -rf ~/.local/share/gvfs-metadata
     rm -rf ~/.local/share/virtualenv
-    rm -rf ~/.pylint.d
     rm -rf ~/.vscode-server/data/CachedExtensionVSIXs
+fi
+if type uv &>/dev/null; then
+    uv clean
 fi
 echo
 echo "==> Cleaning system packages..."
