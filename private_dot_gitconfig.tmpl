@@ -1,0 +1,40 @@
+[core]
+    autocrlf = input
+    excludesFile = ~/.gitignore
+    pager = bat --plain
+    symlinks = true
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[gpg]
+    format = ssh
+[init]
+    defaultBranch = main
+[pull]
+    rebase = true
+[rebase]
+    autoStash = true
+[include]
+    path = ~/.gitconfig_local
+
+{{ if eq .chezmoi.os "darwin" -}}
+# MacOS
+[credential]
+    helper = osxkeychain
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/git_allowed_signers
+    program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+{{ else if eq .chezmoi.os "linux" -}}
+# Linux
+[credential "https://github.com"]
+    helper =
+    helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+    helper =
+    helper = !/usr/bin/gh auth git-credential
+[gpg "ssh"]
+    allowedSignersFile = ~/.ssh/git_allowed_signers
+    program = "/opt/1Password/op-ssh-sign"
+{{ end -}}
