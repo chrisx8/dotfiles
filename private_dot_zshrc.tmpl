@@ -1,7 +1,7 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+if [ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]; then
     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
@@ -82,7 +82,7 @@ if [ -f /opt/homebrew/bin/brew ]; then
 fi
 
 # Cargo
-[[ ! -f "$HOME/.cargo/env" ]] || source "$HOME/.cargo/env"
+[ ! -f "$HOME/.cargo/env" ] || source "$HOME/.cargo/env"
 
 # Git
 alias gitlog="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)'"
@@ -119,6 +119,11 @@ if type lima &> /dev/null; then
     export LIMA_INSTANCE=fedora
 fi
 
+# LM Studio
+if [ -d ~/.lmstudio ]; then
+    export PATH="$PATH:$HOME/.lmstudio/bin"
+fi
+
 # Neovim
 if type nvim &> /dev/null; then
     alias vi=nvim
@@ -132,7 +137,7 @@ function venv {
         echo "Using $(python3 -V)"
         read -q "choice?Can't find .venv in the current working directory. Create a venv? (y/n) "
         echo
-        [[ "$choice" == "y" ]] || return 1
+        [ "$choice" == "y" ] || return 1
         uv venv --seed .venv
     fi
     echo "Activating venv"
@@ -142,11 +147,12 @@ function venv {
 # QR code
 alias qr='qrencode -t utf8'
 
+{{ if eq .chezmoi.os "darwin" -}}
 # MacOS specific
-if [ "$(uname -s)" = "Darwin" ]; then
-    alias sha256sum='shasum -a 256'
-    alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
-fi
+alias sha256sum='shasum -a 256'
+alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
+
+{{ end -}}
 
 # Command completion
 autoload -Uz compinit && compinit -i
