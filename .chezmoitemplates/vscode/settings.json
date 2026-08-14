@@ -2,6 +2,9 @@
   "[ansible]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -20,7 +23,8 @@
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
-    }
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
@@ -36,10 +40,7 @@
   "cSpell.allowCompoundWords": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.fontFamily": "'MesloLGS Nerd Font Mono', monospace",
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
   "files.autoSave": "onFocusChange",
