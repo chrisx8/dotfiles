@@ -3,7 +3,7 @@
   "defaultProvider": "ollama",
   "defaultThinkingLevel": "low",
   "enableInstallTelemetry": false,
-  "lastChangelogVersion": "0.85.1",
+  "lastChangelogVersion": "0.87.1",
   "packages": [
     "npm:@ollama/pi-web-search",
     "npm:pi-token-speed",
