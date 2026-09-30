@@ -16,8 +16,6 @@ if [ "$OS" = "Darwin" ]; then
     rm -rf ~/Library/Application\ Support/Signal/*Cache*
     rm -rf ~/Library/Application\ Support/Signal/logs
     rm -rf ~/Library/Application\ Support/Signal/temp
-    rm -rf ~/Library/Application\ Support/VSCodium/*Cache*
-    rm -rf ~/Library/Application\ Support/VSCodium/logs
     rm -rf ~/Library/Caches/com.microsoft.VSCode*
     rm -rf ~/Library/Caches/im.riot.app*
     rm -rf ~/Library/Caches/js-v8flags
@@ -35,8 +33,6 @@ elif [ "$OS" = "Linux" ]; then
     rm -rf ~/.config/Signal/*Cache*
     rm -rf ~/.config/Signal/logs
     rm -rf ~/.config/Signal/temp
-    rm -rf ~/.config/VSCodium/*Cache*
-    rm -rf ~/.config/VSCodium/logs
     rm -rf ~/.gnome
     rm -rf ~/.local/share/RecentDocuments
     rm -rf ~/.local/share/gvfs-metadata
