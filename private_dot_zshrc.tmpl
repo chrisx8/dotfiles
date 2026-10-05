@@ -138,8 +138,8 @@ function venv {
         echo "Using $(python3 -V)"
         read -q "choice?Can't find .venv in the current working directory. Create a venv? (y/n) "
         echo
-        [ "$choice" == "y" ] || return 1
-        uv venv --seed .venv
+        [ "$choice" = "y" ] || return 1
+        uv venv .venv
     fi
     echo "Activating venv"
     source .venv/bin/activate

@@ -40,7 +40,7 @@
   "chat.disableAIFeatures": true,
   "cSpell.allowCompoundWords": true,
   "editor.bracketPairColorization.enabled": true,
-  "editor.fontFamily": "'MesloLGS Nerd Font Mono', monospace",
+  "editor.fontFamily": "MesloLGS Nerd Font",
   "editor.rulers": [80, 120],
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
@@ -65,7 +65,7 @@
   "vim.enableNeovim": true,
   "vim.useSystemClipboard": true,
   "workbench.colorCustomizations": {
-    "editorRuler.foreground": "#323232"
+    "editorRuler.foreground": "#282828"
   },
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false
