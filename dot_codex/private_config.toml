@@ -4,7 +4,7 @@ model_context_window = 1000000
 model_reasoning_effort = "high"
 personality = "pragmatic"
 plan_mode_reasoning_effort = "high"
-service_tier = "priority"
+service_tier = "fast"
 
 [agents]
 enabled = true
