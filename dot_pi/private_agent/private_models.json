@@ -1,0 +1,41 @@
+{
+  "providers": {
+    "lmstudio": {
+      "baseUrl": "http://localhost:1234/v1",
+      "api": "openai-completions",
+      "apiKey": "lm-studio",
+      "models": [
+        {
+          "id": "qwen/qwen3.6-35b-a3b",
+          "name": "qwen/qwen3.6-35b-a3b",
+          "contextWindow": 262144,
+          "maxTokens": 8192,
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "off": "none",
+            "minimal": null,
+            "low": "low",
+            "medium": null,
+            "high": null,
+            "xhigh": null
+          }
+        },
+        {
+          "id": "qwen/qwen3.8-27b",
+          "name": "qwen/qwen3.8-27b",
+          "contextWindow": 262144,
+          "maxTokens": 8192,
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "off": "none",
+            "minimal": null,
+            "low": "low",
+            "medium": "medium",
+            "high": null,
+            "xhigh": "xhigh"
+          }
+        }
+      ]
+    }
+  }
+}
