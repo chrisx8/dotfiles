@@ -1,3 +1,5 @@
+clipboard-read = ask
+clipboard-write = ask
 font-feature = -calt, -liga, -dlig
 shell-integration-features = ssh-env, sudo
 theme = Ultra Dark
