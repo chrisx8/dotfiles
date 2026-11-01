@@ -10,6 +10,23 @@ service_tier = "fast"
 enabled = true
 default_subagent_reasoning_effort = "medium"
 
+[desktop]
+avatar-overlay-pet-visible = false
+composer-predictions-enabled = false
+confirm-before-close = "never"
+conversationDetailMode = "STEPS_PROSE"
+followUpQueueMode = "steer"
+open-link-in-target-preference = "external-browser"
+open-local-url-in-target-preference = "external-browser"
+preventSleepWhileRunning = true
+show-context-window-usage = true
+
+[desktop.open-in-target-preferences]
+global = "fileManager"
+
+[features]
+workspace_dependencies = false
+
 [tui]
 status_line = ["model-with-reasoning", "current-dir", "git-branch", "branch-changes", "approval-mode", "task-progress", "context-used", "total-input-tokens", "total-output-tokens"]
 status_line_use_colors = true
