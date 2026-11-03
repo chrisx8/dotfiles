@@ -1,11 +1,11 @@
 {
-  "defaultModel": "qwen/qwen3.6-35b-a3b",
+  "defaultModel": "Qwen3.6-35B-A3B-MLX-4bit",
+  "defaultProvider": "omlx",
   "defaultThinkingLevel": "low",
-  "defaultProvider": "lmstudio",
   "enableInstallTelemetry": false,
   "lastChangelogVersion": "1.4.0",
   "packages": [
-    "npm:pi-token-speed",
+    "npm:@narumitw/pi-plan-mode",
     "npm:pi-ollama-cloud"
   ],
   "theme": "dark"
