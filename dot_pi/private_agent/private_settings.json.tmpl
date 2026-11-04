@@ -1,9 +1,13 @@
 {
+{{- if eq .chezmoi.os "darwin" }}
   "defaultModel": "Qwen3.6-35B-A3B-MLX-4bit",
   "defaultProvider": "omlx",
+{{- else if eq .chezmoi.os "linux" }}
+  "defaultModel": "qwen/qwen3.6-35b-a3b",
+  "defaultProvider": "lmstudio",
+{{- end }}
   "defaultThinkingLevel": "low",
   "enableInstallTelemetry": false,
-  "lastChangelogVersion": "1.4.0",
   "packages": [
     "npm:@narumitw/pi-plan-mode",
     "npm:pi-ollama-cloud"
