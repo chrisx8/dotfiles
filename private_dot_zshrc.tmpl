@@ -81,6 +81,9 @@ if [ -f /opt/homebrew/bin/brew ]; then
     FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 fi
 
+# Local bin directory
+export PATH="$HOME/.local/bin:$PATH"
+
 # Cargo
 [ ! -f "$HOME/.cargo/env" ] || source "$HOME/.cargo/env"
 
@@ -163,6 +166,3 @@ alias tailscale='/Applications/Tailscale.app/Contents/MacOS/Tailscale'
 # Command completion
 autoload -Uz compinit && compinit -i
 autoload -Uz bashcompinit && bashcompinit
-
-# Local bin directory
-export PATH="$HOME/.local/bin:$PATH"
