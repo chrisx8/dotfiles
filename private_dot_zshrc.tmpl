@@ -140,6 +140,12 @@ if [ -d ~/.omlx/bin ]; then
     export PATH="$PATH:$HOME/.omlx/bin"
 fi
 
+# pnpm
+if [ -d ~/.local/share/pnpm ]; then
+    export PNPM_HOME="$HOME/.local/share/pnpm"
+    export PATH="$PNPM_HOME/bin:$PATH"
+fi
+
 # Python
 function venv {
     if [ ! -d .venv ]; then

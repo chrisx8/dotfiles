@@ -16,6 +16,16 @@ if type flatpak &> /dev/null; then
     flatpak update
     echo
 fi
+if type pi &> /dev/null; then
+    echo "### pi"
+    pi update
+    echo
+fi
+if type pnpm &> /dev/null; then
+    echo "### pnpm"
+    pnpm self-update
+    echo
+fi
 if type rustup &> /dev/null; then
     echo "### rustup"
     rustup upgrade
