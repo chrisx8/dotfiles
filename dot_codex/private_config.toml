@@ -1,5 +1,5 @@
 approvals_reviewer = "auto_review"
-model = "gpt-6.1-sol"
+model = "gpt-6.2-sol"
 model_context_window = 1000000
 model_reasoning_effort = "high"
 personality = "pragmatic"
@@ -8,7 +8,8 @@ service_tier = "fast"
 
 [agents]
 enabled = true
-default_subagent_reasoning_effort = "medium"
+default_subagent_model = "gpt-6.1-terra"
+default_subagent_reasoning_effort = "high"
 
 [desktop]
 avatar-overlay-pet-visible = false
