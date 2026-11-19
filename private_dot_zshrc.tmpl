@@ -159,7 +159,8 @@ function venv {
     source .venv/bin/activate
 }
 
-# QR code
+# Aliases
+alias loadenv='set -a; source .env; set +a'
 alias qr='qrencode -t utf8'
 
 {{ if eq .chezmoi.os "darwin" -}}
