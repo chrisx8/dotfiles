@@ -10,16 +10,7 @@
           "name": "qwen/qwen3.6-35b-a3b",
           "input": ["text", "image"],
           "contextWindow": 262144,
-          "maxTokens": 32768,
-          "reasoning": true,
-          "thinkingLevelMap": {
-            "off": "none",
-            "minimal": null,
-            "low": "low",
-            "medium": null,
-            "high": null,
-            "xhigh": null
-          }
+          "maxTokens": 32768
         },
         {
           "id": "qwen/qwen3.8-27b",
@@ -45,28 +36,22 @@
       "authHeader": true,
       "models": [
         {
-          "id": "Qwen3.6-35B-A3B-MLX-4bit",
-          "name": "Qwen3.6-35B-A3B-MLX-4bit",
+          "id": "Inkling-2-Mini-oQ4e-mtp",
+          "name": "Inkling-2-Mini-oQ4e-mtp",
           "input": ["text", "image"],
-          "contextWindow": 262144,
-          "maxTokens": 32768,
-          "reasoning": true,
-          "thinkingLevelMap": {
-            "off": "off",
-            "minimal": null,
-            "low": "low",
-            "medium": null,
-            "high": null,
-            "xhigh": null,
-            "max": null
-          },
-          "compat": {
-            "thinkingFormat": "qwen-chat-template"
-          }
+          "contextWindow": 256000,
+          "maxTokens": 32768
         },
         {
-          "id": "Qwen3.8-27B-MLX-4bit",
-          "name": "Qwen3.8-27B-MLX-4bit",
+          "id": "Qwen3.6-35B-A3B-oQ4e-mtp",
+          "name": "Qwen3.6-35B-A3B-oQ4e-mtp",
+          "input": ["text", "image"],
+          "contextWindow": 262144,
+          "maxTokens": 32768
+        },
+        {
+          "id": "Qwen3.8-27B-oQ4e-mtp",
+          "name": "Qwen3.8-27B-oQ4e-mtp",
           "input": ["text", "image"],
           "contextWindow": 262144,
           "maxTokens": 32768,
