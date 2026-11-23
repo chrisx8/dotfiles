@@ -1,1 +1,4 @@
-{{ .chezmoi.homeDir }}/.local/share/uv/tools/yt-dlp/share/zsh/site-functions/_yt-dlp
+{{- $target := joinPath .chezmoi.homeDir ".local/share/uv/tools/yt-dlp/share/zsh/site-functions/_yt-dlp" -}}
+{{- if stat $target -}}
+{{ $target }}
+{{- end -}}

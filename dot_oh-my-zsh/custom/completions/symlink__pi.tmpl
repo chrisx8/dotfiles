@@ -1,1 +1,4 @@
-{{ .chezmoi.homeDir }}/.pi/agent/npm/node_modules/pi-completion/dist/completions/_pi
+{{- $target := joinPath .chezmoi.homeDir ".pi/agent/npm/node_modules/pi-completion/dist/completions/_pi" -}}
+{{- if stat $target -}}
+{{ $target }}
+{{- end -}}
