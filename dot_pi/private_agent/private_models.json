@@ -40,7 +40,16 @@
           "name": "Inkling-2-Mini-oQ4e-mtp",
           "input": ["text", "image"],
           "contextWindow": 256000,
-          "maxTokens": 32768
+          "maxTokens": 32768,
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "off": "none",
+            "minimal": "minimal",
+            "low": "low",
+            "medium": "medium",
+            "high": "high",
+            "max": "max"
+          }
         },
         {
           "id": "Qwen3.6-35B-A3B-oQ4e-mtp",
